@@ -22,7 +22,7 @@ export async function main() {
   const columns = Object.keys(Object.values(stats)[0]) as Array<keyof RepoStats>;
 
   const rows = (Object.values(stats) as Array<RepoStats>).sort((a, b) => {
-    return a.totalLOC - b.totalLOC;
+    return b.totalLOC - a.totalLOC;
   });
 
   if (outType === 'csv') {
