@@ -26,7 +26,7 @@ export async function main() {
     const aTotalLOC = parseInt(a[0]);
     const bTotalLOC = parseInt(b[0]);
 
-    return aTotalLOC - bTotalLOC;
+    return bTotalLOC - aTotalLOC;
   });
 
   if (outType === 'csv') {
