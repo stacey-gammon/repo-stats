@@ -1,5 +1,6 @@
 {
-    "output": "./out.csv",
+    "output": "./docs/index",
+    "outType": "md",
     "extraRepos": [
         { "owner": "babel", "repo": "babel" },
         { "owner": "typescript-eslint", "repo": "typescript-eslint" },

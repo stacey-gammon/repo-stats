@@ -11,19 +11,41 @@ export async function main() {
     .env()
     .file({ file: 'config.json' });
 
-  console.log(nconf.get('extraRepos'));
+  const outType = nconf.get('outType') || 'md';
+
+  if (outType !== 'md' && outType != 'csv') {
+    throw new Error('outType must be one of csv or md.');
+  }
 
   const stats = await getRepoStats(client, nconf.get('extraRepos'));
 
   const columns = Object.keys(Object.values(stats)[0]) as Array<keyof RepoStats>;
-  let csvText = columns.join(',') + '\n';
 
-  Object.values(stats).forEach(row => {
-    const cells = columns.map(col => row[col]);
-    csvText += cells.join(',') + '\n';
-  })
+  // Yes, this logic is very fragile as it depends on the non-deterministic order of the keys. 
+  const rows = (Object.values(stats).map(row => columns.map(col => row[col])) as Array<Array<string>>).sort((a, b) => {
+    const aTotalLOC = parseInt(a[0]);
+    const bTotalLOC = parseInt(b[0]);
 
-  fs.writeFileSync(nconf.get('output'), csvText);
+    return aTotalLOC - bTotalLOC;
+  });
+
+  if (outType === 'csv') {
+    let csvText = columns.join(',') + '\n';
+    rows.forEach(cells => {
+      csvText += cells.join(',') + '\n';
+    });
+    fs.writeFileSync(nconf.get('output') + '.csv', csvText);
+  } else {
+    const mdText = `
+      ## GitHub repository comparison
+
+| ${columns.join(' | ')} |
+| ${columns.map(() => '----').join(' | ')} |
+${rows.map(row => ` | ${row.join(' | ')} |`).join('\n')}
+    `;
+
+    fs.writeFileSync(nconf.get('output') + '.md', mdText);
+  }
 }
 
 

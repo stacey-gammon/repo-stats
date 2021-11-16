@@ -16,9 +16,9 @@ export interface ClocTypeStats {
 }
 
 export interface ClocStats {
-    SUM: ClocTypeStats
- TypeScript?: ClocTypeStats
-    JavaScript?: ClocTypeStats
+  SUM: ClocTypeStats
+  TypeScript?: ClocTypeStats
+  JavaScript?: ClocTypeStats
 }
 
 export interface OctokitResponse {
