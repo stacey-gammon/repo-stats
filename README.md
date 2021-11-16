@@ -1,5 +1,7 @@
 # repo-stats
 
+[View a stats](https://stacey-gammon.github.io/repo-stats/ ) of some large TypeScript monorepos on GitHub.
+
 Compare repository statistics. This tool outputs a csv file with repo statistics from TypeScript repositories in GitHub that are larger than 400MB and have more than 1,000 stars, as well as any repositories listed in `extraRepos` in the `config.json`.  
 
 ## Install dependencies
