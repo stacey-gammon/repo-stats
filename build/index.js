@@ -60,11 +60,14 @@ function main() {
                             { owner: 'microsoft', repo: 'rushstack' },
                             { owner: 'elastic', repo: 'search-ui' },
                             { owner: 'open-telemetry', repo: 'opentelemetry-js' },
+                            { owner: 'open-telemetry', repo: 'opentelemetry-js-contrib' },
                             { owner: 'celo-org', repo: 'celo-monorepo' },
                             { owner: 'angular', repo: 'angular' },
                             { owner: 'formatjs', repo: 'formatjs' },
                             { owner: 'thi-ng', repo: 'umbrella' },
-                            { owner: 'facebook', repo: 'jest' }
+                            { owner: 'facebook', repo: 'jest' },
+                            { owner: 'Esri', repo: 'arcgis-rest-js' },
+                            //    { owner: 'Esri', repo: 'hub' } not found
                         ])];
                 case 1:
                     stats = _a.sent();
@@ -74,7 +77,7 @@ function main() {
                         var cells = columns.map(function (col) { return row[col]; });
                         csvText += cells.join(',') + '\n';
                     });
-                    fs_1.default.writeFileSync("./out.csv", csvText);
+                    fs_1.default.writeFileSync('./out.csv', csvText);
                     return [2 /*return*/];
             }
         });

@@ -58,18 +58,18 @@ function getRepoStats(client, extraRepos) {
                     tempLargestReposCache = path_1.default.resolve(os_1.default.tmpdir(), 'largest_repo_cache');
                     if (!!fs_1.default.existsSync(tempLargestReposCache)) return [3 /*break*/, 2];
                     return [4 /*yield*/, client.search.repos({
-                            q: "language:typescript size:>=400000 stars:>=1000",
-                            sort: "stars",
-                            order: "desc",
-                            size: 1,
-                            type: "all"
+                            q: 'language:typescript size:>=400000 stars:>=1000',
+                            sort: 'stars',
+                            order: 'desc',
+                            size: 5,
+                            type: 'all'
                         })];
                 case 1:
                     data = (_a.sent());
                     fs_1.default.writeFileSync(tempLargestReposCache, JSON.stringify(data));
                     return [3 /*break*/, 3];
                 case 2:
-                    console.log("largest repos are cached");
+                    console.log('largest repos are cached');
                     data = JSON.parse(fs_1.default.readFileSync(tempLargestReposCache, { encoding: 'utf-8' }));
                     _a.label = 3;
                 case 3: return [4 /*yield*/, Promise.all(extraRepos.map(function (_a) {
@@ -88,13 +88,23 @@ function getRepoStats(client, extraRepos) {
                                             })];
                                     case 1:
                                         repoData = _b.sent();
-                                        fs_1.default.writeFileSync(extraRepoFilePath, JSON.stringify(data));
+                                        fs_1.default.writeFileSync(extraRepoFilePath, JSON.stringify(repoData));
                                         data.data.items.push(repoData.data);
                                         return [3 /*break*/, 3];
                                     case 2:
                                         console.log("Extra repo " + repo + " is cached");
                                         repoData = JSON.parse(fs_1.default.readFileSync(extraRepoFilePath, { encoding: 'utf-8' }));
-                                        data.data.items.push(repoData);
+                                        if (!repoData.data.name) {
+                                            if (repoData.data && repoData.data.items) {
+                                                console.error(JSON.stringify(repoData.data.items.map(function (r) { return r.full_name; })));
+                                            }
+                                            else {
+                                                console.error(repoData);
+                                            }
+                                            fs_1.default.rmSync(extraRepoFilePath);
+                                            throw new Error('No name in repoData');
+                                        }
+                                        data.data.items.push(repoData.data);
                                         _b.label = 3;
                                     case 3: return [2 /*return*/];
                                 }
@@ -104,24 +114,26 @@ function getRepoStats(client, extraRepos) {
                 case 4:
                     _a.sent();
                     stats = {};
+                    console.log('About to grab LOC stats');
                     return [4 /*yield*/, Promise.all(data.data.items
                             .map(function (repo) { return __awaiter(_this, void 0, void 0, function () {
                             var tempDir, output, tempCloc, cloc, clocStats;
                             return __generator(this, function (_a) {
                                 switch (_a.label) {
                                     case 0:
+                                        console.log("Grabbing LOC stats for " + repo.name);
                                         tempDir = path_1.default.resolve(os_1.default.tmpdir(), repo.name);
-                                        console.log("cloning " + repo.html_url + " into " + tempDir);
                                         if (!!fs_1.default.existsSync(tempDir)) return [3 /*break*/, 2];
+                                        console.log("cloning " + repo.html_url + " into " + tempDir);
                                         return [4 /*yield*/, (0, child_process_1.execSync)("git clone " + repo.html_url + " " + tempDir)];
                                     case 1:
                                         output = _a.sent();
                                         console.log(output);
                                         _a.label = 2;
                                     case 2:
-                                        console.log('Running cloc now');
                                         tempCloc = path_1.default.resolve(os_1.default.tmpdir(), repo.name + '_cloc') + '.yaml';
                                         if (!!fs_1.default.existsSync(tempCloc)) return [3 /*break*/, 4];
+                                        console.log('Running cloc');
                                         return [4 /*yield*/, (0, child_process_1.execSync)("cloc --exclude-dir=node_modules " + tempDir + " --yaml --out " + tempCloc)];
                                     case 3:
                                         cloc = _a.sent();
@@ -129,12 +141,12 @@ function getRepoStats(client, extraRepos) {
                                         _a.label = 4;
                                     case 4:
                                         clocStats = js_yaml_1.default.load(fs_1.default.readFileSync(tempCloc, { encoding: 'utf-8' }));
-                                        console.log("stats from " + tempCloc + " are:");
-                                        console.log(clocStats);
+                                        console.log("Got stats from " + tempCloc + ".");
                                         stats[repo.name] = {
                                             totalLOC: clocStats.SUM.code,
-                                            tsLOC: clocStats.TypeScript.code,
-                                            name: repo.name,
+                                            tsLOC: clocStats.TypeScript ? clocStats.TypeScript.code : 0,
+                                            jsLOC: clocStats.JavaScript ? clocStats.JavaScript.code : 0,
+                                            name: repo.full_name,
                                             url: repo.html_url,
                                             repoSizeRaw: repo.size,
                                             repoSize: (0, pretty_bytes_1.default)(repo.size * 1024)
@@ -145,6 +157,7 @@ function getRepoStats(client, extraRepos) {
                         }); }))];
                 case 5:
                     _a.sent();
+                    console.log('Returning repo stats');
                     return [2 /*return*/, stats];
             }
         });

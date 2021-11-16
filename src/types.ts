@@ -1,4 +1,4 @@
-import { TEST_REPO } from "./response.mock";
+import { TEST_REPO } from './response.mock';
 
 export interface RepoStats {
  name: string;
@@ -6,6 +6,7 @@ export interface RepoStats {
  repoSizeRaw: number;
  repoSize: string;
  tsLOC: number;
+ jsLOC: number;
  totalLOC: number;
 }
 
@@ -17,6 +18,7 @@ export interface ClocTypeStats {
 export interface ClocStats {
     SUM: ClocTypeStats
     TypeScript?: ClocTypeStats
+    JavaScript?: ClocTypeStats
 }
 
 export interface OctokitResponse {
