@@ -21,28 +21,29 @@ export async function main() {
 
   const columns = Object.keys(Object.values(stats)[0]) as Array<keyof RepoStats>;
 
-  // Yes, this logic is very fragile as it depends on the non-deterministic order of the keys. 
-  const rows = (Object.values(stats).map(row => columns.map(col => row[col])) as Array<Array<string>>).sort((a, b) => {
-    const aTotalLOC = parseInt(a[0]);
-    const bTotalLOC = parseInt(b[0]);
-
-    return bTotalLOC - aTotalLOC;
+  const rows = (Object.values(stats) as Array<RepoStats>).sort((a, b) => {
+    return a.totalLOC - b.totalLOC;
   });
 
   if (outType === 'csv') {
-    let csvText = columns.join(',') + '\n';
-    rows.forEach(cells => {
-      csvText += cells.join(',') + '\n';
-    });
+    let csvText = `
+${columns.join(',')}
+${
+  rows.map(row => {
+    csvText += columns.map(c => row[c]).join(',');
+  }).join('\n')
+}`;
     fs.writeFileSync(nconf.get('output') + '.csv', csvText);
   } else {
     const mdText = `
       ## GitHub repository comparison
 
-| ${columns.join(' | ')} |
-| ${columns.map(() => '----').join(' | ')} |
-${rows.map(row => ` | ${row.join(' | ')} |`).join('\n')}
-    `;
+| Repo | Total LOC | TS LOC | JS LOC | Repo Size |
+| -----|-----------|--------|--------|-----------|
+${rows.map(row => 
+    `| [${row.name}](${row.url}) | ${row.totalLOC} | ${row.tsLOC} | ${row.jsLOC} | ${row.repoSize} |`
+  ).join('\n')}
+`;
 
     fs.writeFileSync(nconf.get('output') + '.md', mdText);
   }
