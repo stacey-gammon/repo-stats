@@ -19,6 +19,7 @@ export interface ClocStats {
   SUM: ClocTypeStats
   TypeScript?: ClocTypeStats
   JavaScript?: ClocTypeStats
+  [key: string]: ClocTypeStats | undefined 
 }
 
 export interface OctokitResponse {

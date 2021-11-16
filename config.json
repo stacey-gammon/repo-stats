@@ -1,6 +1,13 @@
 {
     "output": "./docs/index",
     "outType": "md",
+    "languages": [
+        "TypeScript",
+        "JavaScript",
+        "Java",
+        "C++",
+        "Python"
+    ],
     "extraRepos": [
         { "owner": "babel", "repo": "babel" },
         { "owner": "typescript-eslint", "repo": "typescript-eslint" },

@@ -4,6 +4,10 @@
 
 Compare repository statistics. This tool outputs a csv file with repo statistics from TypeScript repositories in GitHub that are larger than 400MB and have more than 1,000 stars, as well as any repositories listed in `extraRepos` in the `config.json`.  
 
+## Calculations
+
+Cloc is used for LOC counting, however rather than using their `SUM.code` counts, as that includes a lot of not-actually-code, total LOC is counted by adding the set of languages in "languages" inside config.json
+
 ## Install dependencies
 
 1. Install the git CLI globally. You'll need this to clone the repo locally in order to count LOC.

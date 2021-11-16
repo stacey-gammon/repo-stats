@@ -12,12 +12,13 @@ export async function main() {
     .file({ file: 'config.json' });
 
   const outType = nconf.get('outType') || 'md';
+  const languages = nconf.get('languages') || ['TypeScript'];
 
   if (outType !== 'md' && outType != 'csv') {
     throw new Error('outType must be one of csv or md.');
   }
 
-  const stats = await getRepoStats(client, nconf.get('extraRepos'));
+  const stats = await getRepoStats(client, nconf.get('extraRepos'), languages);
 
   const columns = Object.keys(Object.values(stats)[0]) as Array<keyof RepoStats>;
 

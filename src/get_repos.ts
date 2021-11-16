@@ -11,7 +11,7 @@ import prettyBytes from 'pretty-bytes';
 const LARGER_THAN_FILTER = 400000; // 400 MB
 const STARS_FILTER = 1000;
 
-export async function getRepoStats(client: Octokit, extraRepos: Array<{ owner: string, repo: string }>): Promise<{ [key: string]: RepoStats }> {
+export async function getRepoStats(client: Octokit, extraRepos: Array<{ owner: string, repo: string }>, languagesForSum: string[]): Promise<{ [key: string]: RepoStats }> {
   let data: OctokitResponse = { data: { items: [TEST_REPO] } };
   const tempLargestReposCache = Path.resolve(os.tmpdir(), 'largest_repo_cache');
 
@@ -88,7 +88,7 @@ export async function getRepoStats(client: Octokit, extraRepos: Array<{ owner: s
         console.log(`Got stats from ${tempCloc}.`);
 
         stats[repo.name] = {
-          totalLOC: clocStats.SUM.code,
+          totalLOC: getSum(clocStats, languagesForSum),
           tsLOC: clocStats.TypeScript ? clocStats.TypeScript.code : 0,
           jsLOC: clocStats.JavaScript ? clocStats.JavaScript.code : 0,
           name: repo.full_name,
@@ -101,4 +101,13 @@ export async function getRepoStats(client: Octokit, extraRepos: Array<{ owner: s
 
   console.log('Returning repo stats'); 
   return stats;
+}
+
+function getSum(stats: ClocStats, languagesForSum: string[]): number {
+  return languagesForSum.reduce((sum, language) => {
+    if (stats[language]) {
+      sum += stats[language]?.code || 0
+    }
+    return sum;
+  }, 0);
 }
