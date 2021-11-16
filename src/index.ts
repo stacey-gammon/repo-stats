@@ -42,7 +42,7 @@ ${
 | Repo | Total LOC | TS LOC | JS LOC | Repo Size |
 | -----|-----------|--------|--------|-----------|
 ${rows.map(row => 
-    `| [${row.name}](${row.url}) | ${row.totalLOC} | ${row.tsLOC} | ${row.jsLOC} | ${row.repoSize} |`
+    `| [${row.name}](${row.url}) | ${row.totalLOC.toLocaleString()} | ${row.tsLOC.toLocaleString()} | ${row.jsLOC.toLocaleString()} | ${row.repoSize} |`
   ).join('\n')}
 `;
 
