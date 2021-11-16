@@ -17,7 +17,7 @@ export interface ClocTypeStats {
 
 export interface ClocStats {
     SUM: ClocTypeStats
-    TypeScript?: ClocTypeStats
+ TypeScript?: ClocTypeStats
     JavaScript?: ClocTypeStats
 }
 
