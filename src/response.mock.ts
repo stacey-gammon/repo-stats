@@ -3,7 +3,9 @@ export const TEST_REPO = {
   name: 'vscode',
   full_name: 'microsoft/vscode',
   private: false,
-  owner: Object,
+  owner: {
+    login: 'microsoft'
+  },
   html_url: 'https://github.com/microsoft/vscode',
   description: 'Visual Studio Code',
   fork: false,

@@ -8,6 +8,7 @@ export interface RepoStats {
  tsLOC: number;
  jsLOC: number;
  totalLOC: number;
+ monthlyCommitCount: number;
 }
 
 export interface ClocTypeStats {
@@ -27,3 +28,7 @@ export interface OctokitResponse {
 }
 
 export type OctokitRepo = typeof TEST_REPO;
+
+export interface ContributorStats {
+  committersLastMonth: number;
+}
