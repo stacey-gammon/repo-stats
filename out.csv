@@ -34,10 +34,12 @@ totalLOC,tsLOC,jsLOC,name,url,repoSizeRaw,repoSize
 246615,73945,1858,microsoft/rushstack,https://github.com/microsoft/rushstack,84266,86.3 MB
 42467,0,13798,elastic/search-ui,https://github.com/elastic/search-ui,5981,6.12 MB
 47902,35663,2076,open-telemetry/opentelemetry-js,https://github.com/open-telemetry/opentelemetry-js,17560,18 MB
+44612,31369,3159,open-telemetry/opentelemetry-js-contrib,https://github.com/open-telemetry/opentelemetry-js-contrib,23241,23.8 MB
 206835,93301,2833,celo-org/celo-monorepo,https://github.com/celo-org/celo-monorepo,191898,197 MB
 634240,462299,43262,angular/angular,https://github.com/angular/angular,318902,327 MB
 138468,39738,1466,formatjs/formatjs,https://github.com/formatjs/formatjs,45715,46.8 MB
 241673,135819,3487,thi-ng/umbrella,https://github.com/thi-ng/umbrella,124329,127 MB
 131654,72600,23592,facebook/jest,https://github.com/facebook/jest,262706,269 MB
-44612,31369,3159,open-telemetry/opentelemetry-js-contrib,https://github.com/open-telemetry/opentelemetry-js-contrib,23241,23.8 MB
 152661,42155,2040,Esri/arcgis-rest-js,https://github.com/Esri/arcgis-rest-js,78409,80.3 MB
+837869,27613,701,airbytehq/airbyte,https://github.com/airbytehq/airbyte,81163,83.1 MB
+2725621,0,30,elastic/elasticsearch,https://github.com/elastic/elasticsearch,920430,943 MB

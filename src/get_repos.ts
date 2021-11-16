@@ -8,7 +8,8 @@ import fs from 'fs';
 import yaml from 'js-yaml';
 import prettyBytes from 'pretty-bytes';
 
-
+const LARGER_THAN_FILTER = 400000; // 400 MB
+const STARS_FILTER = 1000;
 
 export async function getRepoStats(client: Octokit, extraRepos: Array<{ owner: string, repo: string }>): Promise<{ [key: string]: RepoStats }> {
   let data: OctokitResponse = { data: { items: [TEST_REPO] } };
@@ -16,7 +17,7 @@ export async function getRepoStats(client: Octokit, extraRepos: Array<{ owner: s
 
   if (!fs.existsSync(tempLargestReposCache)) {
     data = await client.search.repos({
-      q: 'language:typescript size:>=400000 stars:>=1000',
+      q: `language:typescript size:>=${LARGER_THAN_FILTER} stars:>=${STARS_FILTER}`,
       sort: 'stars',
       order: 'desc',
       size: 5,
