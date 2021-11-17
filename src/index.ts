@@ -40,6 +40,13 @@ ${
 }`;
     fs.writeFileSync(nconf.get('output') + '.csv', csvText);
   } else {
+
+    const maxTotalLOC = getMaxVal(rows, 'totalLOC');
+    const maxTsLOC = getMaxVal(rows, 'tsLOC');
+    const maxRawRepoSize = getMaxVal(rows, 'repoSizeRaw');
+    const maxCommits = getMaxVal(rows, 'monthlyCommitCount');
+    const maxCommitters = getMaxVal(rows, 'monthlyCommitterCount');
+
     const mdText = `
       ## GitHub monorepo statistics 
 
@@ -49,10 +56,20 @@ The following list of repositories was selected because of one of the following:
 
 I am leveraging Cloc for the LOC, however, for the total, I am only counting the languages defined in the [config.json](../config.json), so as to eliminate counting things like lines of JSON (of which, for example, the Kibana repo has a couple million!).
 
+The highest number in each column is highlighted.
+
 | Repo | Total LOC | TS LOC | JS LOC | Repo Size | Monthly commit count | Monthly committer count |
 | -----|-----------|--------|--------|-----------|----------------------|----------------|
-${rows.map(row => 
-    `| [${row.name}](${row.url}) | ${row.totalLOC.toLocaleString()} | ${row.tsLOC.toLocaleString()} | ${row.jsLOC.toLocaleString()} | ${row.repoSize} | ${row.monthlyCommitCount} | ${row.monthlyCommitterCount} | `
+${rows.map(row => {
+    const repo = `[${row.name}](${row.url})`;
+    const totalLOC = highlightIfMatches(row.totalLOC, maxTotalLOC, row.totalLOC.toLocaleString());
+    const totalTsLOC = highlightIfMatches(row.totalLOC, maxTsLOC, row.tsLOC.toLocaleString());
+    const repoSize = highlightIfMatches(row.repoSizeRaw, maxRawRepoSize, row.repoSize);
+    const commitCount = highlightIfMatches(row.monthlyCommitCount, maxCommits);
+    const committerCount = highlightIfMatches(row.monthlyCommitterCount, maxCommitters);
+
+    return `| ${repo} | ${totalLOC} | ${totalTsLOC} | ${row.jsLOC.toLocaleString()} | ${repoSize} | ${commitCount} | ${committerCount} 🤓 | `
+  }
   ).join('\n')}
 `;
 
@@ -60,5 +77,20 @@ ${rows.map(row =>
   }
 }
 
+function highlightIfMatches(contents: number, toMatch: number, displayVal?: string): string {
+  const matches = toMatch === contents;
+  const display = displayVal || contents.toString();
+  return matches ? `<span style="background-color: #F4D03F">${display}</span>` : display;
+}
+
+function getMaxVal(rows: RepoStats[], col: keyof RepoStats): number {
+  return rows.reduce<number>((max, row) => {
+    if (typeof row[col] != 'number') {
+      throw new Error('Non-numerical type');
+    }
+    const num: number = row[col] as number;
+    return num> max ? num : max
+  }, 0);
+}
 
 main();
