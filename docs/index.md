@@ -1,17 +1,17 @@
 
-      ## GitHub monorepo statistics 
+## Statistics on the worlds largest Typescript GitHub monorepos
 
 The following list of repositories was selected because of one of the following:
-1. They are TypeScript repositories **over 400 MB** and 1000 stars
-2. Any additional repositories defined in the [config.json](../config.json) when I last ran the script.
+1. They are TypeScript repositories **over 400 MB and 1000 stars**
+2. They are defined in `extraRepos` in the [config.json](../config.json).
 
-I am leveraging Cloc for the LOC, however, for the total, I am only counting the languages defined in the [config.json](../config.json), so as to eliminate counting things like lines of JSON (of which, for example, the Kibana repo has a couple million!).
+I am leveraging [Cloc](https://github.com/AlDanial/cloc) for the LOC, however, for the total, I am only counting the languages defined in [config.json](../config.json), so as to eliminate counting things like lines of JSON (of which, for example, the Kibana repo has a couple million!).
 
 The highest number in each column is highlighted.
 
 | Repo | Total LOC | TS LOC | JS LOC | Repo Size | Monthly commit count | Monthly committer count |
 | -----|-----------|--------|--------|-----------|----------------------|----------------|
-| [BabylonJS/Babylon.js](https://github.com/BabylonJS/Babylon.js) | <span style="background-color: #F4D03F">3,186,513</span> | 904,814 | 2,281,699 | <span style="background-color: #F4D03F">4.28 GB</span> | 506 | 26 🤓 | 
+| [BabylonJS/Babylon.js](https://github.com/BabylonJS/Babylon.js) | <span style="background-color: #F4D03F">3,186,513</span> | 904,814 | <span style="background-color: #F4D03F">2,281,699</span> | <span style="background-color: #F4D03F">4.28 GB</span> | 506 | 26 🤓 | 
 | [elastic/kibana](https://github.com/elastic/kibana) | 3,022,929 | <span style="background-color: #F4D03F">2,722,837</span> | 299,953 | 3.6 GB | 962 | 185 🤓 | 
 | [DefinitelyTyped/DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped) | 2,526,352 | 2,526,352 | 0 | 789 MB | 446 | <span style="background-color: #F4D03F">313</span> 🤓 | 
 | [elastic/elasticsearch](https://github.com/elastic/elasticsearch) | 2,273,956 | 0 | 30 | 943 MB | 484 | 86 🤓 | 
@@ -55,3 +55,6 @@ The highest number in each column is highlighted.
 | [react-dnd/react-dnd](https://github.com/react-dnd/react-dnd) | 16,791 | 16,101 | 690 | 653 MB | 0 | 0 🤓 | 
 | [elastic/search-ui](https://github.com/elastic/search-ui) | 13,798 | 0 | 13,798 | 6.12 MB | 4 | 2 🤓 | 
 | [alixaxel/chrome-aws-lambda](https://github.com/alixaxel/chrome-aws-lambda) | 1,304 | 1,261 | 43 | 1.57 GB | 0 | 0 🤓 | 
+
+
+_Think your repo belongs on this list? Shoot me an email at stacey@staceygammon.com, or throw up a PR to have it added._

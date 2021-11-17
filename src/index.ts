@@ -73,6 +73,9 @@ ${rows.map(row => {
     return `| ${repo} | ${totalLOC} | ${totalTsLOC} | ${totalJsLOC} | ${repoSize} | ${commitCount} | ${committerCount} 🤓 | `
   }
   ).join('\n')}
+
+
+_Think your repo belongs on this list? Shoot me an email at stacey@staceygammon.com, or throw up a PR to have it added._
 `;
 
     fs.writeFileSync(nconf.get('output') + '.md', mdText);
