@@ -53,9 +53,9 @@ ${
 
 The following list of repositories was selected because of one of the following:
 1. They are TypeScript repositories **over 400 MB and 1000 stars**
-2. They are defined in \`extraRepos\` in the [config.json](../config.json).
+2. They are defined in \`extraRepos\` in the [config.json](https://github.com/stacey-gammon/repo-stats/blob/main/config.json).
 
-I am leveraging [Cloc](https://github.com/AlDanial/cloc) for the LOC, however, for the total, I am only counting the languages defined in [config.json](../config.json), so as to eliminate counting things like lines of JSON (of which, for example, the Kibana repo has a couple million!).
+I am leveraging [Cloc](https://github.com/AlDanial/cloc) for the LOC, however, for the total, I am only counting the languages defined in [config.json](https://github.com/stacey-gammon/repo-stats/blob/main/config.json), so as to eliminate counting things like lines of JSON (of which, for example, the Kibana repo has a couple million!).
 
 The highest number in each column is highlighted.
 
