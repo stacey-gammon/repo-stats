@@ -1,5 +1,7 @@
-@import "{{ site.theme }}";
+---
+---
+@import "";
 
-.inner {
-  max-width: 85%;
+.main-content {
+  max-width: 95%;
 }
