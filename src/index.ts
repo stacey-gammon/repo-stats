@@ -49,10 +49,10 @@ The following repositories contain:
 
 I am leveraging Cloc for the LOC, however, for the total, I am only counting the languages defined in the [config.json](../config.json), so as to eliminate counting things like lines of JSON (of which, for example, the Kibana repo has a couple million!).
 
-| Repo | Total LOC | TS LOC | JS LOC | Repo Size | Monthly commit count |
-| -----|-----------|--------|--------|-----------|----------------------|
+| Repo | Total LOC | TS LOC | JS LOC | Repo Size | Monthly commit count | Monthly committer count |
+| -----|-----------|--------|--------|-----------|----------------------|----------------|
 ${rows.map(row => 
-    `| [${row.name}](${row.url}) | ${row.totalLOC.toLocaleString()} | ${row.tsLOC.toLocaleString()} | ${row.jsLOC.toLocaleString()} | ${row.repoSize} | ${row.monthlyCommitCount}`
+    `| [${row.name}](${row.url}) | ${row.totalLOC.toLocaleString()} | ${row.tsLOC.toLocaleString()} | ${row.jsLOC.toLocaleString()} | ${row.repoSize} | ${row.monthlyCommitCount} | ${row.monthlyCommitterCount} | `
   ).join('\n')}
 `;
 

@@ -1,8 +1,8 @@
 import { Octokit } from '@octokit/rest';
 import { ClocStats, OctokitRepo, RepoStats } from '../types';
 import prettyBytes from 'pretty-bytes';
-import { getClocStats } from './get_cloc_stats'
-import { getLastFourWeekCommitCount } from './get_contributor_stats';
+import { getStatsFromClonedRepo } from './get_cloned_repo_stats'
+import { getLastFourWeekCommitCount } from './get_commit_count_stats';
 
 export async function getRepoStats(
   client: Octokit,
@@ -15,7 +15,7 @@ export async function getRepoStats(
     repos
       .map(async (repo) => {   
       
-        const clocStats: ClocStats = await getClocStats(repo);
+        const { clocStats, monthlyCommitterCount } = await getStatsFromClonedRepo(repo);
         const monthlyCommitCount = await getLastFourWeekCommitCount(client, repo);
 
         stats[repo.name] = {
@@ -27,6 +27,7 @@ export async function getRepoStats(
           repoSizeRaw: repo.size,
           repoSize: prettyBytes(repo.size * 1024),
           monthlyCommitCount,
+          monthlyCommitterCount
         }
       })
   );

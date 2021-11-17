@@ -4,9 +4,9 @@ import Path from 'path';
 import os from 'os';
 import fs from 'fs';
 import yaml from 'js-yaml';
+import moment from 'moment';
 
-export async function getClocStats(repo: OctokitRepo): Promise<ClocStats> {
-  console.log(`Grabbing LOC stats for ${repo.name}`);  
+export async function getStatsFromClonedRepo(repo: OctokitRepo): Promise<{ clocStats: ClocStats, monthlyCommitterCount: number }> {
   const tempDir = Path.resolve(os.tmpdir(), repo.name);
 
   if (!fs.existsSync(tempDir)) {
@@ -20,5 +20,16 @@ export async function getClocStats(repo: OctokitRepo): Promise<ClocStats> {
     await execSync(`cloc --exclude-dir=node_modules ${tempDir} --yaml --out ${tempCloc}`);
   }
 
-  return yaml.load(fs.readFileSync(tempCloc, { encoding: 'utf-8' })) as ClocStats;
+  const todayDate = moment();
+  const monthAgoDate = moment().subtract(1, 'months');
+  const today = todayDate.format('YYYY-MM-DD');
+  const monthAgo = monthAgoDate.format('YYYY-MM-DD');
+
+  const cnt = await execSync(`git shortlog --since=${monthAgo} --until=${today} -sn < /dev/tty | wc -l`, {
+    cwd: tempDir
+  });
+  const clocStats = yaml.load(fs.readFileSync(tempCloc, { encoding: 'utf-8' })) as ClocStats;
+
+  return { clocStats, monthlyCommitterCount: parseInt(cnt.toString()) }
 }
+

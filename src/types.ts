@@ -9,6 +9,7 @@ export interface RepoStats {
  jsLOC: number;
  totalLOC: number;
  monthlyCommitCount: number;
+ monthlyCommitterCount: number;
 }
 
 export interface ClocTypeStats {
