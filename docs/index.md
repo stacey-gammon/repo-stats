@@ -12,7 +12,7 @@ The highest number in each column is highlighted.
 | Repo | Total LOC | TS LOC | JS LOC | Repo Size | Monthly commit count | Monthly committer count |
 | -----|-----------|--------|--------|-----------|----------------------|----------------|
 | [BabylonJS/Babylon.js](https://github.com/BabylonJS/Babylon.js) | <span style="background-color: #F4D03F">3,186,513</span> | 904,814 | 2,281,699 | <span style="background-color: #F4D03F">4.28 GB</span> | 506 | 26 🤓 | 
-| [elastic/kibana](https://github.com/elastic/kibana) | 3,022,929 | 2,722,837 | 299,953 | 3.6 GB | 962 | 185 🤓 | 
+| [elastic/kibana](https://github.com/elastic/kibana) | 3,022,929 | <span style="background-color: #F4D03F">2,722,837</span> | 299,953 | 3.6 GB | 962 | 185 🤓 | 
 | [DefinitelyTyped/DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped) | 2,526,352 | 2,526,352 | 0 | 789 MB | 446 | <span style="background-color: #F4D03F">313</span> 🤓 | 
 | [elastic/elasticsearch](https://github.com/elastic/elasticsearch) | 2,273,956 | 0 | 30 | 943 MB | 484 | 86 🤓 | 
 | [microsoft/TypeScript](https://github.com/microsoft/TypeScript) | 2,211,484 | 619,106 | 1,592,378 | 1.62 GB | 83 | 18 🤓 | 

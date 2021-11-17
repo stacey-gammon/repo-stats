@@ -63,7 +63,7 @@ The highest number in each column is highlighted.
 ${rows.map(row => {
     const repo = `[${row.name}](${row.url})`;
     const totalLOC = highlightIfMatches(row.totalLOC, maxTotalLOC, row.totalLOC.toLocaleString());
-    const totalTsLOC = highlightIfMatches(row.totalLOC, maxTsLOC, row.tsLOC.toLocaleString());
+    const totalTsLOC = highlightIfMatches(row.tsLOC, maxTsLOC, row.tsLOC.toLocaleString());
     const repoSize = highlightIfMatches(row.repoSizeRaw, maxRawRepoSize, row.repoSize);
     const commitCount = highlightIfMatches(row.monthlyCommitCount, maxCommits);
     const committerCount = highlightIfMatches(row.monthlyCommitterCount, maxCommitters);
