@@ -13,6 +13,7 @@ Cloc is used for LOC counting, however rather than using their `SUM.code` counts
 1. Install the git CLI globally. You'll need this to clone the repo locally in order to count LOC.
 2. Install [cloc](https://github.com/AlDanial/cloc) globally.
 3. Install yarn dependencies via `yarn install`.
+4. 
 ##  Build
 
 ```
@@ -31,6 +32,20 @@ To continuously build while making changes.
 ## Configure
 
 Edit `config.json` if you'd like to change the output directory, or add additional repositories.
+
+### clearCache
+
+Run with `--clearCache` or set a variable in the config file to true if you would like to delete all cached information. By default the cache is never cleaned up. Cloning large repositories can take a very long time!
+
+### languages
+
+Set the list of languages that will count towards `totalLOC`. 
+
+## outType
+
+`md` or `csv`.
+
+### extraRepos
 
 ## Run
 
