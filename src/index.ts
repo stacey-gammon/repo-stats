@@ -43,8 +43,8 @@ ${
     const mdText = `
       ## GitHub monorepo statistics 
 
-The following repositories contain:
-1. The largest TypeScript repositories over 400 MB and 1000 stars
+The following list of repositories was selected because of one of the following:
+1. They are TypeScript repositories **over 400 MB** and 1000 stars
 2. Any additional repositories defined in the [config.json](../config.json) when I last ran the script.
 
 I am leveraging Cloc for the LOC, however, for the total, I am only counting the languages defined in the [config.json](../config.json), so as to eliminate counting things like lines of JSON (of which, for example, the Kibana repo has a couple million!).
