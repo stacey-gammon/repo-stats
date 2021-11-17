@@ -43,6 +43,7 @@ ${
 
     const maxTotalLOC = getMaxVal(rows, 'totalLOC');
     const maxTsLOC = getMaxVal(rows, 'tsLOC');
+    const maxJsLOC = getMaxVal(rows, 'jsLOC');
     const maxRawRepoSize = getMaxVal(rows, 'repoSizeRaw');
     const maxCommits = getMaxVal(rows, 'monthlyCommitCount');
     const maxCommitters = getMaxVal(rows, 'monthlyCommitterCount');
@@ -64,11 +65,12 @@ ${rows.map(row => {
     const repo = `[${row.name}](${row.url})`;
     const totalLOC = highlightIfMatches(row.totalLOC, maxTotalLOC, row.totalLOC.toLocaleString());
     const totalTsLOC = highlightIfMatches(row.tsLOC, maxTsLOC, row.tsLOC.toLocaleString());
+    const totalJsLOC = highlightIfMatches(row.jsLOC, maxJsLOC, row.jsLOC.toLocaleString());
     const repoSize = highlightIfMatches(row.repoSizeRaw, maxRawRepoSize, row.repoSize);
     const commitCount = highlightIfMatches(row.monthlyCommitCount, maxCommits);
     const committerCount = highlightIfMatches(row.monthlyCommitterCount, maxCommitters);
 
-    return `| ${repo} | ${totalLOC} | ${totalTsLOC} | ${row.jsLOC.toLocaleString()} | ${repoSize} | ${commitCount} | ${committerCount} 🤓 | `
+    return `| ${repo} | ${totalLOC} | ${totalTsLOC} | ${totalJsLOC} | ${repoSize} | ${commitCount} | ${committerCount} 🤓 | `
   }
   ).join('\n')}
 `;
