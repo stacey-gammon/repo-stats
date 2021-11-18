@@ -1,27 +1,34 @@
 {
-    "output": "./docs/index",
+    "outputFolder": "docs",
     "outType": "md",
     "languages": [
         "TypeScript",
         "JavaScript",
         "Java",
-        "C++",
-        "Python"
+        "C++"
     ],
-    "extraRepos": [
-        { "owner": "babel", "repo": "babel" },
-        { "owner": "typescript-eslint", "repo": "typescript-eslint" },
-        { "owner": "microsoft", "repo": "rushstack" },
-        { "owner": "elastic", "repo": "search-ui" },
-        { "owner": "open-telemetry", "repo": "opentelemetry-js" },
-        { "owner": "open-telemetry", "repo": "opentelemetry-js-contrib" },
-        { "owner": "celo-org", "repo": "celo-monorepo" },
-        { "owner": "angular", "repo": "angular" },
-        { "owner": "formatjs", "repo": "formatjs" },
-        { "owner": "thi-ng", "repo": "umbrella" },
-        { "owner": "facebook", "repo": "jest" },
-        { "owner": "Esri", "repo": "arcgis-rest-js" },
-        { "owner": "airbytehq", "repo": "airbyte" },
-        { "owner": "elastic", "repo": "elasticsearch" }
+    "extraRepos": {
+        "TypeScript": [
+            { "owner": "babel", "repo": "babel" },
+            { "owner": "typescript-eslint", "repo": "typescript-eslint" },
+            { "owner": "microsoft", "repo": "rushstack" },
+            { "owner": "elastic", "repo": "search-ui" },
+            { "owner": "open-telemetry", "repo": "opentelemetry-js" },
+            { "owner": "open-telemetry", "repo": "opentelemetry-js-contrib" },
+            { "owner": "celo-org", "repo": "celo-monorepo" },
+            { "owner": "angular", "repo": "angular" },
+            { "owner": "formatjs", "repo": "formatjs" },
+            { "owner": "thi-ng", "repo": "umbrella" },
+            { "owner": "facebook", "repo": "jest" },
+            { "owner": "Esri", "repo": "arcgis-rest-js" },
+            { "owner": "airbytehq", "repo": "airbyte" },
+            { "owner": "elastic", "repo": "elasticsearch" }
+        ],
+        "Java": [
+            { "owner": "elastic", "repo": "elasticsearch" }
+        ]
+    },
+    "skipRepos": [
+      "owid/covid-19-data"
     ]
 }

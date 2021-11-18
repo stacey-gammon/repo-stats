@@ -7,38 +7,57 @@ import yaml from 'js-yaml';
 import moment from 'moment';
 import nconf from 'nconf';
 
+
 export async function getStatsFromClonedRepo(repo: OctokitRepo): Promise<{ clocStats: ClocStats, monthlyCommitterCount: number }> {
-  const tempDir = Path.resolve(os.tmpdir(), repo.name);
+  const cloneDirectory = Path.resolve(os.tmpdir(), repo.name);
+  await cloneInto(cloneDirectory, repo);
+  const clocStats = await getLocStats(cloneDirectory, repo);
+  const monthlyCommitterCount = await getMonthyContributorStats(cloneDirectory);
 
-  if (fs.existsSync(tempDir) && nconf.get('clearCache')) {
-    fs.rmSync(tempDir);
+  return { clocStats, monthlyCommitterCount }
+}
+
+async function cloneInto(cloneDirectory: string, repo: OctokitRepo) {
+  if (fs.existsSync(cloneDirectory) && nconf.get('clearCache')) {
+    fs.rmSync(cloneDirectory);
   }
 
-  if (!fs.existsSync(tempDir)) {
-    console.log(`cloning ${repo.html_url} into ${tempDir}`);  
-    const output = await execSync(`git clone ${repo.html_url} ${tempDir}`);
-    console.log(output);  
+  if (!fs.existsSync(cloneDirectory)) {
+    console.log(`Cloning repo, ${repo.full_name}, into ${cloneDirectory}`);  
+    await execSync(`git clone ${repo.html_url} ${cloneDirectory}`); 
+  } else {
+    console.log(`Repo, ${repo.full_name}, is already cloned into ${cloneDirectory}`);  
   }
-  const tempCloc = Path.resolve(os.tmpdir(), repo.name + '_cloc') + '.yaml';
+}
 
-  if (fs.existsSync(tempCloc) && nconf.get('clearCache')) {
-    fs.rmSync(tempCloc);
+async function getLocStats(cloneDirectory: string, repo: OctokitRepo): Promise<ClocStats> {
+  const locFile = getLocFilePathCache(repo.name);
+
+  if (fs.existsSync(locFile) && nconf.get('clearCache')) {
+    fs.rmSync(locFile);
   }
 
-  if (!fs.existsSync(tempCloc)) {
-    await execSync(`cloc --exclude-dir=node_modules ${tempDir} --yaml --out ${tempCloc}`);
+  if (!fs.existsSync(locFile)) {
+    console.log(`Collecting line count stats for repo ${repo.full_name}.`);  
+    await execSync(`cloc --exclude-dir=node_modules ${cloneDirectory} --yaml --out ${locFile}`);
+  } else {
+    console.log(`Repo, ${repo.full_name}, has line count stats cached`);  
   }
+  return yaml.load(fs.readFileSync(locFile, { encoding: 'utf-8' })) as ClocStats;
+}
 
+function getLocFilePathCache(name: string) {
+  return Path.resolve(os.tmpdir(), name + '_cloc') + '.yaml';
+}
+
+async function getMonthyContributorStats(cloneDirectory: string) {
   const todayDate = moment();
   const monthAgoDate = moment().subtract(1, 'months');
   const today = todayDate.format('YYYY-MM-DD');
   const monthAgo = monthAgoDate.format('YYYY-MM-DD');
 
-  const cnt = await execSync(`git shortlog --since=${monthAgo} --until=${today} -sn < /dev/tty | wc -l`, {
-    cwd: tempDir
+  const output = await execSync(`git shortlog --since=${monthAgo} --until=${today} -sn < /dev/tty | wc -l`, {
+    cwd: cloneDirectory
   });
-  const clocStats = yaml.load(fs.readFileSync(tempCloc, { encoding: 'utf-8' })) as ClocStats;
-
-  return { clocStats, monthlyCommitterCount: parseInt(cnt.toString()) }
+  return parseInt(output.toString())
 }
-

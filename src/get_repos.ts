@@ -9,55 +9,58 @@ const STARS_FILTER = 1000;
 
 export async function getRepos(
   client: Octokit,
-  extraRepos: Array<{ owner: string, repo: string }>): Promise<Array<OctokitRepo>> {
+  language: string,
+  extraRepos?: Array<{ owner: string, repo: string }>): Promise<Array<OctokitRepo>> {
   const repos: Array<OctokitRepo> = [];
-  const tempLargestReposCache = Path.resolve(os.tmpdir(), 'largest_repo_cache');
+  const tempLargestReposCache = Path.resolve(os.tmpdir(), `largest_repo_cache${language}`);
 
   if (!fs.existsSync(tempLargestReposCache)) {
+    console.log(`Finding largest repos for language ${language}`);
     const response = await client.search.repos({
-      q: `language:typescript size:>=${LARGER_THAN_FILTER} stars:>=${STARS_FILTER}`,
+      q: `language:${language.toLowerCase()} size:>=${LARGER_THAN_FILTER} stars:>=${STARS_FILTER}`,
       sort: 'stars',
       order: 'desc',
-      size: 5,
+      per_page: 5,
       type: 'all'
     }) as unknown as OctokitResponse;
         
     fs.writeFileSync(tempLargestReposCache, JSON.stringify(response));
     repos.push(...response.data.items);
   } else {
-    console.log('largest repos are cached');
+    console.log(`Searching for largest ${language} repos response is cached.`);
     const response = JSON.parse(fs.readFileSync(tempLargestReposCache, { encoding: 'utf-8' }));
     repos.push(...response.data.items);
   }
 
-  await Promise.all(extraRepos.map(async ({ owner, repo }) => {
-    const extraRepoFilePath = Path.resolve(
-      os.tmpdir(),
-      `extraRepoUrl${owner}${repo}`);
+  if (extraRepos) {
+    for (const { owner, repo } of extraRepos) {
+      const extraRepoFilePath = Path.resolve(
+        os.tmpdir(),
+        `extraRepoUrl${owner}${repo}`);
 
-    if (!fs.existsSync(extraRepoFilePath)) {
-      const repoData = await client.repos.get({
-        repo,
-        owner
-      });
-      fs.writeFileSync(extraRepoFilePath, JSON.stringify(repoData));
-      repos.push(repoData.data as unknown as OctokitRepo);
-    } else {
-      console.log(`Extra repo ${repo} is cached`);
+      if (!fs.existsSync(extraRepoFilePath)) {
+        const repoData = await client.repos.get({
+          repo,
+          owner
+        });
+        fs.writeFileSync(extraRepoFilePath, JSON.stringify(repoData));
+        repos.push(repoData.data as unknown as OctokitRepo);
+      } else {
+        console.log(`Extra repo ${repo} for language ${language} is cached`);
 
-      const repoData = JSON.parse(fs.readFileSync(extraRepoFilePath, { encoding: 'utf-8' }));
-      if (!repoData.data.name) {
-        if (repoData.data && repoData.data.items) {
-          console.error(JSON.stringify(repoData.data.items.map((r: OctokitRepo) => r.full_name)));
-        } else {
-          console.error(repoData);
+        const repoData = JSON.parse(fs.readFileSync(extraRepoFilePath, { encoding: 'utf-8' }));
+        if (!repoData.data.name) {
+          if (repoData.data && repoData.data.items) {
+            console.error(JSON.stringify(repoData.data.items.map((r: OctokitRepo) => r.full_name)));
+          } else {
+            console.error(repoData);
+          }
+          fs.rmSync(extraRepoFilePath);
+          throw new Error('No name in repoData');
         }
-        fs.rmSync(extraRepoFilePath);
-        throw new Error('No name in repoData');
+        repos.push(repoData.data);
       }
-      repos.push(repoData.data);
     }
   }
-  ));
   return repos;
 }

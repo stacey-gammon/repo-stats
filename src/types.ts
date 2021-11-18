@@ -1,15 +1,14 @@
 import { TEST_REPO } from './response.mock';
-
 export interface RepoStats {
  name: string;
  url: string;
  repoSizeRaw: number;
  repoSize: string;
- tsLOC: number;
- jsLOC: number;
+ primaryLOC: number;
  totalLOC: number;
  monthlyCommitCount: number;
  monthlyCommitterCount: number;
+ primaryLanguage: string;
 }
 
 export interface ClocTypeStats {
