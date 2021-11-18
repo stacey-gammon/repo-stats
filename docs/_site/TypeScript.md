@@ -1,7 +1,5 @@
 
-## Statistics on the worlds largest TypeScript GitHub monorepos
-
-| [TypeScript](./TypeScript.md) | [JavaScript](./JavaScript.md) | [Java](./Java.md) | [C++](./C++.md) | 
+## Statistics on the worlds largest Typescript GitHub monorepos
 
 The following list of repositories was selected because of one of the following:
 1. They are TypeScript repositories **over 400 MB and 1000 stars**
@@ -15,8 +13,8 @@ The highest number in each column is highlighted.
 | -----|----------------------|-----------|------------------|----------------|
 | [BabylonJS/Babylon.js](https://github.com/BabylonJS/Babylon.js) |  904,814 | <span style="background-color: #F4D03F">4.29 GB</span> | 506 | 26 🤓 | 
 | [elastic/kibana](https://github.com/elastic/kibana) |  <span style="background-color: #F4D03F">2,722,837</span> | 3.61 GB | 962 | 183 🤓 | 
-| [DefinitelyTyped/DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped) |  2,526,352 | 785 MB | 446 | <span style="background-color: #F4D03F">305</span> 🤓 | 
-| [elastic/elasticsearch](https://github.com/elastic/elasticsearch) |  0 | 943 MB | 484 | 83 🤓 | 
+| [DefinitelyTyped/DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped) |  2,526,352 | 785 MB | 446 | <span style="background-color: #F4D03F">308</span> 🤓 | 
+| [elastic/elasticsearch](https://github.com/elastic/elasticsearch) |  0 | 943 MB | 484 | 84 🤓 | 
 | [microsoft/vscode](https://github.com/microsoft/vscode) |  763,871 | 434 MB | <span style="background-color: #F4D03F">1135</span> | 65 🤓 | 
 | [angular/angular](https://github.com/angular/angular) |  462,299 | 327 MB | 170 | 41 🤓 | 
 | [backstage/backstage](https://github.com/backstage/backstage) |  225,224 | 996 MB | 779 | 79 🤓 | 
@@ -49,7 +47,7 @@ The highest number in each column is highlighted.
 | [react-dnd/react-dnd](https://github.com/react-dnd/react-dnd) |  16,101 | 653 MB | 0 | 0 🤓 | 
 | [elastic/search-ui](https://github.com/elastic/search-ui) |  0 | 6.12 MB | 4 | 2 🤓 | 
 | [garrylachman/ElectroCRUD](https://github.com/garrylachman/ElectroCRUD) |  5,553 | 1.14 GB | 0 | 0 🤓 | 
-| [trustwallet/assets](https://github.com/trustwallet/assets) |  3,068 | 490 MB | 411 | 214 🤓 | 
+| [trustwallet/assets](https://github.com/trustwallet/assets) |  3,068 | 490 MB | 411 | 215 🤓 | 
 
 
 _Think your repo belongs on this list? Shoot me an email at stacey@staceygammon.com, or throw up a PR to have it added._

@@ -1,7 +1,5 @@
 
-## Statistics on the worlds largest undefined GitHub monorepos
-
-| [TypeScript](./TypeScript.md) | [JavaScript](./JavaScript.md) | [Java](./Java.md) | [C++](./C++.md) | 
+## Statistics on the worlds largest GitHub monorepos
 
 The following list of repositories was selected because of one of the following:
 1. They are  repositories **over 400 MB and 1000 stars**
@@ -14,12 +12,12 @@ The highest number in each column is highlighted.
 | Repo |  Total LOC | Primary language | Primary language LOC | Repo Size | Monthly commit count | Monthly committer count |
 | -----|-------|-----|----------------------|-----------|------------------|----------------|
 | [arangodb/arangodb](https://github.com/arangodb/arangodb) | <span style="background-color: #F4D03F">4,963,853</span> | JavaScript | 1,122,689 | 1.75 GB | 92 | 20 🤓 | 
-| [aosp-mirror/platform_frameworks_base](https://github.com/aosp-mirror/platform_frameworks_base) | 3,616,146 | Java | <span style="background-color: #F4D03F">3,329,823</span> | 2.97 GB | 248 | 115 🤓 | 
+| [aosp-mirror/platform_frameworks_base](https://github.com/aosp-mirror/platform_frameworks_base) | 3,616,146 | Java | <span style="background-color: #F4D03F">3,329,823</span> | 2.97 GB | 248 | 116 🤓 | 
 | [BabylonJS/Babylon.js](https://github.com/BabylonJS/Babylon.js) | 3,186,513 | TypeScript | 904,814 | 4.29 GB | 506 | 26 🤓 | 
 | [elastic/kibana](https://github.com/elastic/kibana) | 3,022,790 | TypeScript | 2,722,837 | 3.61 GB | 962 | 183 🤓 | 
 | [nodejs/node](https://github.com/nodejs/node) | 2,697,882 | JavaScript | 1,050,380 | 785 MB | 109 | 45 🤓 | 
-| [DefinitelyTyped/DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped) | 2,526,352 | TypeScript | 2,526,352 | 785 MB | 446 | <span style="background-color: #F4D03F">305</span> 🤓 | 
-| [elastic/elasticsearch](https://github.com/elastic/elasticsearch) | 2,273,534 | Java | 2,273,504 | 943 MB | 484 | 83 🤓 | 
+| [DefinitelyTyped/DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped) | 2,526,352 | TypeScript | 2,526,352 | 785 MB | 446 | <span style="background-color: #F4D03F">308</span> 🤓 | 
+| [elastic/elasticsearch](https://github.com/elastic/elasticsearch) | 2,273,534 | Java | 2,273,504 | 943 MB | 484 | 84 🤓 | 
 | [apache/hadoop](https://github.com/apache/hadoop) | 1,900,828 | Java | 1,817,236 | 539 MB | 63 | 29 🤓 | 
 | [codesandbox/codesandbox-client](https://github.com/codesandbox/codesandbox-client) | 1,862,886 | JavaScript | 1,672,637 | 496 MB | 40 | 11 🤓 | 
 | [apache/camel](https://github.com/apache/camel) | 1,606,893 | Java | 1,588,449 | 566 MB | 337 | 41 🤓 | 
@@ -41,7 +39,7 @@ The highest number in each column is highlighted.
 | [blender/blender](https://github.com/blender/blender) | 614,734 | C++ | 614,734 | 562 MB | 983 | 65 🤓 | 
 | [SeleniumHQ/selenium](https://github.com/SeleniumHQ/selenium) | 518,760 | Java | 115,488 | 1.98 GB | 93 | 20 🤓 | 
 | [OpenAPITools/openapi-generator](https://github.com/OpenAPITools/openapi-generator) | 516,012 | Java | 423,340 | 601 MB | 94 | 46 🤓 | 
-| [ampproject/amphtml](https://github.com/ampproject/amphtml) | 507,427 | JavaScript | 480,181 | 943 MB | 215 | 38 🤓 | 
+| [ampproject/amphtml](https://github.com/ampproject/amphtml) | 507,427 | JavaScript | 480,181 | 943 MB | 215 | 39 🤓 | 
 | [angular/angular](https://github.com/angular/angular) | 505,561 | TypeScript | 462,299 | 327 MB | 170 | 41 🤓 | 
 | [libgdx/libgdx](https://github.com/libgdx/libgdx) | 481,827 | Java | 276,167 | 1.12 GB | 3 | 4 🤓 | 
 | [apache/pulsar](https://github.com/apache/pulsar) | 462,001 | Java | 430,142 | 1.37 GB | 258 | 60 🤓 | 
@@ -60,15 +58,15 @@ The highest number in each column is highlighted.
 | [jgraph/drawio](https://github.com/jgraph/drawio) | 258,289 | JavaScript | 255,044 | 697 MB | 19 | 4 🤓 | 
 | [signalapp/Signal-Android](https://github.com/signalapp/Signal-Android) | 253,009 | Java | 252,977 | 496 MB | 232 | 8 🤓 | 
 | [elastic/eui](https://github.com/elastic/eui) | 250,984 | TypeScript | 105,427 | 671 MB | 52 | 12 🤓 | 
-| [cypress-io/cypress](https://github.com/cypress-io/cypress) | 244,069 | JavaScript | 169,694 | 474 MB | 79 | 22 🤓 | 
+| [cypress-io/cypress](https://github.com/cypress-io/cypress) | 244,069 | JavaScript | 169,694 | 474 MB | 79 | 23 🤓 | 
 | [facebook/relay](https://github.com/facebook/relay) | 227,109 | JavaScript | 227,109 | 1.5 GB | 115 | 22 🤓 | 
-| [ccxt/ccxt](https://github.com/ccxt/ccxt) | 222,006 | JavaScript | 221,359 | 1.21 GB | 1182 | 18 🤓 | 
+| [ccxt/ccxt](https://github.com/ccxt/ccxt) | 222,006 | JavaScript | 221,359 | 1.21 GB | 1182 | 19 🤓 | 
 | [microsoft/azure-pipelines-tasks](https://github.com/microsoft/azure-pipelines-tasks) | 203,149 | TypeScript | 197,798 | 467 MB | 18 | 10 🤓 | 
 | [ARMmbed/mbed-os](https://github.com/ARMmbed/mbed-os) | 201,649 | C++ | 201,649 | 487 MB | 22 | 13 🤓 | 
 | [apache/shardingsphere](https://github.com/apache/shardingsphere) | 199,968 | Java | 198,946 | 445 MB | 290 | 34 🤓 | 
 | [greenplum-db/gpdb](https://github.com/greenplum-db/gpdb) | 180,731 | C++ | 180,070 | 610 MB | 29 | 36 🤓 | 
 | [babel/babel](https://github.com/babel/babel) | 176,024 | TypeScript | 51,349 | 78.2 MB | 61 | 12 🤓 | 
-| [aframevr/aframe](https://github.com/aframevr/aframe) | 174,693 | JavaScript | 174,693 | 672 MB | 4 | 4 🤓 | 
+| [aframevr/aframe](https://github.com/aframevr/aframe) | 174,693 | JavaScript | 174,693 | 672 MB | 4 | 6 🤓 | 
 | [raphw/byte-buddy](https://github.com/raphw/byte-buddy) | 168,998 | Java | 168,998 | 1.02 GB | 49 | 1 🤓 | 
 | [typescript-eslint/typescript-eslint](https://github.com/typescript-eslint/typescript-eslint) | 158,988 | TypeScript | 156,418 | 26.5 MB | 58 | 13 🤓 | 
 | [thi-ng/umbrella](https://github.com/thi-ng/umbrella) | 139,306 | TypeScript | 135,819 | 127 MB | 100 | 1 🤓 | 
@@ -86,7 +84,7 @@ The highest number in each column is highlighted.
 | [facebook/jest](https://github.com/facebook/jest) | 96,192 | TypeScript | 72,600 | 269 MB | 18 | 15 🤓 | 
 | [celo-org/celo-monorepo](https://github.com/celo-org/celo-monorepo) | 96,134 | TypeScript | 93,301 | 197 MB | 29 | 14 🤓 | 
 | [wireshark/wireshark](https://github.com/wireshark/wireshark) | 93,347 | C++ | 93,347 | 961 MB | 262 | 57 🤓 | 
-| [java-native-access/jna](https://github.com/java-native-access/jna) | 88,279 | Java | 88,151 | 536 MB | 10 | 4 🤓 | 
+| [java-native-access/jna](https://github.com/java-native-access/jna) | 88,279 | Java | 88,151 | 536 MB | 10 | 5 🤓 | 
 | [junit-team/junit5](https://github.com/junit-team/junit5) | 87,585 | Java | 87,526 | 629 MB | 66 | 8 🤓 | 
 | [Anuken/Mindustry](https://github.com/Anuken/Mindustry) | 87,291 | Java | 87,070 | 1.81 GB | 123 | 30 🤓 | 
 | [microsoft/rushstack](https://github.com/microsoft/rushstack) | 75,803 | TypeScript | 73,945 | 86.3 MB | 140 | 13 🤓 | 
@@ -118,7 +116,7 @@ The highest number in each column is highlighted.
 | [be5invis/Iosevka](https://github.com/be5invis/Iosevka) | 7,056 | JavaScript | 7,056 | <span style="background-color: #F4D03F">26.2 GB</span> | 27 | 1 🤓 | 
 | [leapmotion/ProjectNorthStar](https://github.com/leapmotion/ProjectNorthStar) | 6,745 | C++ | 6,745 | 439 MB | 0 | 0 🤓 | 
 | [garrylachman/ElectroCRUD](https://github.com/garrylachman/ElectroCRUD) | 5,611 | TypeScript | 5,553 | 1.14 GB | 0 | 0 🤓 | 
-| [trustwallet/assets](https://github.com/trustwallet/assets) | 3,092 | TypeScript | 3,068 | 490 MB | 411 | 214 🤓 | 
+| [trustwallet/assets](https://github.com/trustwallet/assets) | 3,092 | TypeScript | 3,068 | 490 MB | 411 | 215 🤓 | 
 | [be5invis/Sarasa-Gothic](https://github.com/be5invis/Sarasa-Gothic) | 2,866 | JavaScript | 2,866 | 3.14 GB | 6 | 1 🤓 | 
 | [OLIMEX/OLINUXINO](https://github.com/OLIMEX/OLINUXINO) | 1,969 | C++ | 1,130 | 423 MB | 0 | 0 🤓 | 
 | [Tencent/TencentOS-kernel](https://github.com/Tencent/TencentOS-kernel) | 1,913 | C++ | 1,913 | 1.51 GB | 0 | 0 🤓 | 

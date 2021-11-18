@@ -1,7 +1,5 @@
 
-## Statistics on the worlds largest Java GitHub monorepos
-
-| [TypeScript](./TypeScript.md) | [JavaScript](./JavaScript.md) | [Java](./Java.md) | [C++](./C++.md) | 
+## Statistics on the worlds largest Typescript GitHub monorepos
 
 The following list of repositories was selected because of one of the following:
 1. They are Java repositories **over 400 MB and 1000 stars**
@@ -13,8 +11,8 @@ The highest number in each column is highlighted.
 
 | Repo |  Primary language LOC | Repo Size | Monthly commit count | Monthly committer count |
 | -----|----------------------|-----------|------------------|----------------|
-| [aosp-mirror/platform_frameworks_base](https://github.com/aosp-mirror/platform_frameworks_base) |  <span style="background-color: #F4D03F">3,329,823</span> | 2.97 GB | 248 | <span style="background-color: #F4D03F">115</span> 🤓 | 
-| [elastic/elasticsearch](https://github.com/elastic/elasticsearch) |  2,273,504 | 943 MB | <span style="background-color: #F4D03F">484</span> | 83 🤓 | 
+| [aosp-mirror/platform_frameworks_base](https://github.com/aosp-mirror/platform_frameworks_base) |  <span style="background-color: #F4D03F">3,329,823</span> | 2.97 GB | 248 | <span style="background-color: #F4D03F">116</span> 🤓 | 
+| [elastic/elasticsearch](https://github.com/elastic/elasticsearch) |  2,273,504 | 943 MB | <span style="background-color: #F4D03F">484</span> | 84 🤓 | 
 | [apache/hadoop](https://github.com/apache/hadoop) |  1,817,236 | 539 MB | 63 | 29 🤓 | 
 | [apache/camel](https://github.com/apache/camel) |  1,588,449 | 566 MB | 337 | 41 🤓 | 
 | [apache/flink](https://github.com/apache/flink) |  1,401,228 | 427 MB | 190 | 65 🤓 | 
@@ -35,7 +33,7 @@ The highest number in each column is highlighted.
 | [apache/shardingsphere](https://github.com/apache/shardingsphere) |  198,946 | 445 MB | 290 | 34 🤓 | 
 | [raphw/byte-buddy](https://github.com/raphw/byte-buddy) |  168,998 | 1.02 GB | 49 | 1 🤓 | 
 | [gephi/gephi](https://github.com/gephi/gephi) |  119,342 | 538 MB | 16 | 2 🤓 | 
-| [java-native-access/jna](https://github.com/java-native-access/jna) |  88,151 | 536 MB | 10 | 4 🤓 | 
+| [java-native-access/jna](https://github.com/java-native-access/jna) |  88,151 | 536 MB | 10 | 5 🤓 | 
 | [junit-team/junit5](https://github.com/junit-team/junit5) |  87,526 | 629 MB | 66 | 8 🤓 | 
 | [Anuken/Mindustry](https://github.com/Anuken/Mindustry) |  87,070 | 1.81 GB | 123 | 30 🤓 | 
 | [williamfiset/Algorithms](https://github.com/williamfiset/Algorithms) |  30,659 | 1.06 GB | 6 | 2 🤓 | 

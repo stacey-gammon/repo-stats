@@ -1,7 +1,5 @@
 
-## Statistics on the worlds largest C++ GitHub monorepos
-
-| [TypeScript](./TypeScript.md) | [JavaScript](./JavaScript.md) | [Java](./Java.md) | [C++](./C++.md) | 
+## Statistics on the worlds largest Typescript GitHub monorepos
 
 The following list of repositories was selected because of one of the following:
 1. They are C++ repositories **over 400 MB and 1000 stars**
