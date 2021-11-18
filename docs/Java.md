@@ -1,7 +1,7 @@
 
 ## Statistics on the worlds largest Java GitHub monorepos
 
-| [TypeScript](./TypeScript.md) | [JavaScript](./JavaScript.md) | [Java](./Java.md) | [C++](./C++.md) | 
+| [TypeScript](./TypeScript.md) | [JavaScript](./JavaScript.md) | <span style="background-color: #F4D03F">[Java](./Java.md)</span> | [C++](./C++.md) | 
 
 The following list of repositories was selected because of one of the following:
 1. They are Java repositories **over 400 MB and 1000 stars**
@@ -11,7 +11,7 @@ I am leveraging [Cloc](https://github.com/AlDanial/cloc) for the LOC, however, f
 
 The highest number in each column is highlighted.
 
-| Repo |  Primary language LOC | Repo Size | Monthly commit count | Monthly committer count |
+| Repo |  LOC | Repo Size | Monthly commit count | Monthly committer count |
 | -----|----------------------|-----------|------------------|----------------|
 | [aosp-mirror/platform_frameworks_base](https://github.com/aosp-mirror/platform_frameworks_base) |  <span style="background-color: #F4D03F">3,329,823</span> | 2.97 GB | 248 | <span style="background-color: #F4D03F">115</span> 🤓 | 
 | [elastic/elasticsearch](https://github.com/elastic/elasticsearch) |  2,273,504 | 943 MB | <span style="background-color: #F4D03F">484</span> | 83 🤓 | 

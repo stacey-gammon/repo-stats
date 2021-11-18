@@ -1,7 +1,7 @@
 
 ## Statistics on the worlds largest C++ GitHub monorepos
 
-| [TypeScript](./TypeScript.md) | [JavaScript](./JavaScript.md) | [Java](./Java.md) | [C++](./C++.md) | 
+| [TypeScript](./TypeScript.md) | [JavaScript](./JavaScript.md) | [Java](./Java.md) | <span style="background-color: #F4D03F">[C++](./C++.md)</span> | 
 
 The following list of repositories was selected because of one of the following:
 1. They are C++ repositories **over 400 MB and 1000 stars**
@@ -11,14 +11,14 @@ I am leveraging [Cloc](https://github.com/AlDanial/cloc) for the LOC, however, f
 
 The highest number in each column is highlighted.
 
-| Repo |  Primary language LOC | Repo Size | Monthly commit count | Monthly committer count |
+| Repo |  LOC | Repo Size | Monthly commit count | Monthly committer count |
 | -----|----------------------|-----------|------------------|----------------|
-| [gcc-mirror/gcc](https://github.com/gcc-mirror/gcc) |  <span style="background-color: #F4D03F">1,127,319</span> | <span style="background-color: #F4D03F">3.09 GB</span> | 704 | <span style="background-color: #F4D03F">108</span> 🤓 | 
+| [gcc-mirror/gcc](https://github.com/gcc-mirror/gcc) |  <span style="background-color: #F4D03F">1,127,319</span> | <span style="background-color: #F4D03F">3.09 GB</span> | 704 | <span style="background-color: #F4D03F">107</span> 🤓 | 
 | [catboost/catboost](https://github.com/catboost/catboost) |  702,974 | 843 MB | 587 | 76 🤓 | 
 | [blender/blender](https://github.com/blender/blender) |  614,734 | 562 MB | <span style="background-color: #F4D03F">983</span> | 65 🤓 | 
 | [TelegramMessenger/Telegram-iOS](https://github.com/TelegramMessenger/Telegram-iOS) |  326,330 | 629 MB | 107 | 3 🤓 | 
 | [ARMmbed/mbed-os](https://github.com/ARMmbed/mbed-os) |  201,649 | 487 MB | 22 | 13 🤓 | 
-| [greenplum-db/gpdb](https://github.com/greenplum-db/gpdb) |  180,070 | 610 MB | 29 | 36 🤓 | 
+| [greenplum-db/gpdb](https://github.com/greenplum-db/gpdb) |  180,070 | 610 MB | 29 | 35 🤓 | 
 | [videolan/vlc](https://github.com/videolan/vlc) |  103,476 | 522 MB | 145 | 24 🤓 | 
 | [hanwckf/rt-n56u](https://github.com/hanwckf/rt-n56u) |  54,884 | 1.18 GB | 0 | 0 🤓 | 
 | [wireshark/wireshark](https://github.com/wireshark/wireshark) |  93,347 | 961 MB | 262 | 57 🤓 | 

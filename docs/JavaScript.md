@@ -1,7 +1,7 @@
 
 ## Statistics on the worlds largest JavaScript GitHub monorepos
 
-| [TypeScript](./TypeScript.md) | [JavaScript](./JavaScript.md) | [Java](./Java.md) | [C++](./C++.md) | 
+| [TypeScript](./TypeScript.md) | <span style="background-color: #F4D03F">[JavaScript](./JavaScript.md)</span> | [Java](./Java.md) | [C++](./C++.md) | 
 
 The following list of repositories was selected because of one of the following:
 1. They are JavaScript repositories **over 400 MB and 1000 stars**
@@ -11,7 +11,7 @@ I am leveraging [Cloc](https://github.com/AlDanial/cloc) for the LOC, however, f
 
 The highest number in each column is highlighted.
 
-| Repo |  Primary language LOC | Repo Size | Monthly commit count | Monthly committer count |
+| Repo |  LOC | Repo Size | Monthly commit count | Monthly committer count |
 | -----|----------------------|-----------|------------------|----------------|
 | [arangodb/arangodb](https://github.com/arangodb/arangodb) |  1,122,689 | 1.75 GB | 92 | 20 🤓 | 
 | [nodejs/node](https://github.com/nodejs/node) |  1,050,380 | 785 MB | 109 | 45 🤓 | 
@@ -22,14 +22,14 @@ The highest number in each column is highlighted.
 | [ampproject/amphtml](https://github.com/ampproject/amphtml) |  480,181 | 943 MB | 215 | 38 🤓 | 
 | [Automattic/wp-calypso](https://github.com/Automattic/wp-calypso) |  306,661 | 543 MB | 540 | 90 🤓 | 
 | [mrdoob/three.js](https://github.com/mrdoob/three.js) |  393,156 | 1.06 GB | 90 | 26 🤓 | 
-| [facebook/react-native](https://github.com/facebook/react-native) |  247,054 | 763 MB | 145 | 55 🤓 | 
+| [facebook/react-native](https://github.com/facebook/react-native) |  247,054 | 763 MB | 145 | 54 🤓 | 
 | [gatsbyjs/gatsby](https://github.com/gatsbyjs/gatsby) |  267,124 | 968 MB | 193 | 50 🤓 | 
 | [vercel/next.js](https://github.com/vercel/next.js) |  239,097 | 1.77 GB | 424 | 93 🤓 | 
 | [WordPress/gutenberg](https://github.com/WordPress/gutenberg) |  284,613 | 542 MB | 395 | 95 🤓 | 
 | [jgraph/drawio](https://github.com/jgraph/drawio) |  255,044 | 697 MB | 19 | 4 🤓 | 
 | [cypress-io/cypress](https://github.com/cypress-io/cypress) |  169,694 | 474 MB | 79 | 22 🤓 | 
 | [facebook/relay](https://github.com/facebook/relay) |  227,109 | 1.5 GB | 115 | 22 🤓 | 
-| [ccxt/ccxt](https://github.com/ccxt/ccxt) |  221,359 | 1.21 GB | 1182 | 18 🤓 | 
+| [ccxt/ccxt](https://github.com/ccxt/ccxt) |  221,359 | 1.21 GB | 1182 | 17 🤓 | 
 | [aframevr/aframe](https://github.com/aframevr/aframe) |  174,693 | 672 MB | 4 | 4 🤓 | 
 | [NervJS/taro](https://github.com/NervJS/taro) |  55,625 | 1.02 GB | 43 | 20 🤓 | 
 | [zhaoolee/ChromeAppHeroes](https://github.com/zhaoolee/ChromeAppHeroes) |  111,630 | 802 MB | 0 | 0 🤓 | 

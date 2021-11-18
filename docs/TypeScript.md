@@ -1,7 +1,7 @@
 
 ## Statistics on the worlds largest TypeScript GitHub monorepos
 
-| [TypeScript](./TypeScript.md) | [JavaScript](./JavaScript.md) | [Java](./Java.md) | [C++](./C++.md) | 
+| <span style="background-color: #F4D03F">[TypeScript](./TypeScript.md)</span> | [JavaScript](./JavaScript.md) | [Java](./Java.md) | [C++](./C++.md) | 
 
 The following list of repositories was selected because of one of the following:
 1. They are TypeScript repositories **over 400 MB and 1000 stars**
@@ -11,15 +11,15 @@ I am leveraging [Cloc](https://github.com/AlDanial/cloc) for the LOC, however, f
 
 The highest number in each column is highlighted.
 
-| Repo |  Primary language LOC | Repo Size | Monthly commit count | Monthly committer count |
+| Repo |  LOC | Repo Size | Monthly commit count | Monthly committer count |
 | -----|----------------------|-----------|------------------|----------------|
 | [BabylonJS/Babylon.js](https://github.com/BabylonJS/Babylon.js) |  904,814 | <span style="background-color: #F4D03F">4.29 GB</span> | 506 | 26 🤓 | 
-| [elastic/kibana](https://github.com/elastic/kibana) |  <span style="background-color: #F4D03F">2,722,837</span> | 3.61 GB | 962 | 183 🤓 | 
+| [elastic/kibana](https://github.com/elastic/kibana) |  <span style="background-color: #F4D03F">2,722,837</span> | 3.61 GB | 962 | 182 🤓 | 
 | [DefinitelyTyped/DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped) |  2,526,352 | 785 MB | 446 | <span style="background-color: #F4D03F">305</span> 🤓 | 
 | [elastic/elasticsearch](https://github.com/elastic/elasticsearch) |  0 | 943 MB | 484 | 83 🤓 | 
 | [microsoft/vscode](https://github.com/microsoft/vscode) |  763,871 | 434 MB | <span style="background-color: #F4D03F">1135</span> | 65 🤓 | 
 | [angular/angular](https://github.com/angular/angular) |  462,299 | 327 MB | 170 | 41 🤓 | 
-| [backstage/backstage](https://github.com/backstage/backstage) |  225,224 | 996 MB | 779 | 79 🤓 | 
+| [backstage/backstage](https://github.com/backstage/backstage) |  225,224 | 996 MB | 779 | 78 🤓 | 
 | [grafana/grafana](https://github.com/grafana/grafana) |  357,183 | 462 MB | 494 | 100 🤓 | 
 | [artsy/eigen](https://github.com/artsy/eigen) |  314,902 | 430 MB | 143 | 23 🤓 | 
 | [ag-grid/ag-grid](https://github.com/ag-grid/ag-grid) |  117,558 | 1.19 GB | 419 | 11 🤓 | 
@@ -36,7 +36,7 @@ The highest number in each column is highlighted.
 | [celo-org/celo-monorepo](https://github.com/celo-org/celo-monorepo) |  93,301 | 197 MB | 29 | 14 🤓 | 
 | [microsoft/rushstack](https://github.com/microsoft/rushstack) |  73,945 | 86.3 MB | 140 | 13 🤓 | 
 | [vmware/clarity](https://github.com/vmware/clarity) |  55,828 | 516 MB | 13 | 8 🤓 | 
-| [AdaptiveConsulting/ReactiveTraderCloud](https://github.com/AdaptiveConsulting/ReactiveTraderCloud) |  49,837 | 433 MB | 94 | 5 🤓 | 
+| [AdaptiveConsulting/ReactiveTraderCloud](https://github.com/AdaptiveConsulting/ReactiveTraderCloud) |  49,837 | 433 MB | 94 | 4 🤓 | 
 | [common-voice/common-voice](https://github.com/common-voice/common-voice) |  25,127 | 1.42 GB | 417 | 100 🤓 | 
 | [Esri/arcgis-rest-js](https://github.com/Esri/arcgis-rest-js) |  42,155 | 80.3 MB | 7 | 2 🤓 | 
 | [x-extends/vxe-table](https://github.com/x-extends/vxe-table) |  43,618 | 884 MB | 28 | 2 🤓 | 
