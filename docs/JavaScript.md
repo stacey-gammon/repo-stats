@@ -11,7 +11,7 @@ I am leveraging [Cloc](https://github.com/AlDanial/cloc) for the LOC, however, f
 
 The highest number in each column is highlighted.
 
-| Repo |  LOC | Repo Size | Monthly commit count | Monthly committer count |
+| Repo | JavaScript LOC | Repo Size | Monthly commit count | Monthly committer count |
 | -----|----------------------|-----------|------------------|----------------|
 | [arangodb/arangodb](https://github.com/arangodb/arangodb) |  1,122,689 | 1.75 GB | 92 | 20 🤓 | 
 | [nodejs/node](https://github.com/nodejs/node) |  1,050,380 | 785 MB | 109 | 45 🤓 | 

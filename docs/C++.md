@@ -11,7 +11,7 @@ I am leveraging [Cloc](https://github.com/AlDanial/cloc) for the LOC, however, f
 
 The highest number in each column is highlighted.
 
-| Repo |  LOC | Repo Size | Monthly commit count | Monthly committer count |
+| Repo | C++ LOC | Repo Size | Monthly commit count | Monthly committer count |
 | -----|----------------------|-----------|------------------|----------------|
 | [gcc-mirror/gcc](https://github.com/gcc-mirror/gcc) |  <span style="background-color: #F4D03F">1,127,319</span> | <span style="background-color: #F4D03F">3.09 GB</span> | 704 | <span style="background-color: #F4D03F">107</span> 🤓 | 
 | [catboost/catboost](https://github.com/catboost/catboost) |  702,974 | 843 MB | 587 | 76 🤓 | 

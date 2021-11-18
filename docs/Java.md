@@ -11,7 +11,7 @@ I am leveraging [Cloc](https://github.com/AlDanial/cloc) for the LOC, however, f
 
 The highest number in each column is highlighted.
 
-| Repo |  LOC | Repo Size | Monthly commit count | Monthly committer count |
+| Repo | Java LOC | Repo Size | Monthly commit count | Monthly committer count |
 | -----|----------------------|-----------|------------------|----------------|
 | [aosp-mirror/platform_frameworks_base](https://github.com/aosp-mirror/platform_frameworks_base) |  <span style="background-color: #F4D03F">3,329,823</span> | 2.97 GB | 248 | <span style="background-color: #F4D03F">115</span> 🤓 | 
 | [elastic/elasticsearch](https://github.com/elastic/elasticsearch) |  2,273,504 | 943 MB | <span style="background-color: #F4D03F">484</span> | 83 🤓 | 

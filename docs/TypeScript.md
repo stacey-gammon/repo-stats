@@ -11,7 +11,7 @@ I am leveraging [Cloc](https://github.com/AlDanial/cloc) for the LOC, however, f
 
 The highest number in each column is highlighted.
 
-| Repo |  LOC | Repo Size | Monthly commit count | Monthly committer count |
+| Repo | TypeScript LOC | Repo Size | Monthly commit count | Monthly committer count |
 | -----|----------------------|-----------|------------------|----------------|
 | [BabylonJS/Babylon.js](https://github.com/BabylonJS/Babylon.js) |  904,814 | <span style="background-color: #F4D03F">4.29 GB</span> | 506 | 26 🤓 | 
 | [elastic/kibana](https://github.com/elastic/kibana) |  <span style="background-color: #F4D03F">2,722,837</span> | 3.61 GB | 962 | 182 🤓 | 
