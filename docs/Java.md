@@ -1,7 +1,7 @@
 
 ## Statistics on the worlds largest Java GitHub monorepos
 
-| [TypeScript](./TypeScript.md) | [JavaScript](./JavaScript.md) | <span style="background-color: #F4D03F">[Java](./Java.md)</span> | [C++](./C++.md) | 
+| [all](./index.html) | [TypeScript](./TypeScript.md) | [JavaScript](./JavaScript.md) | <span style="background-color: #F4D03F">[Java](./Java.md)</span> | [C++](./C++.md) | 
 
 The following list of repositories was selected because of one of the following:
 1. They are Java repositories **over 400 MB and 1000 stars**

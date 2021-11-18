@@ -1,7 +1,7 @@
 
 ## Statistics on the worlds largest JavaScript GitHub monorepos
 
-| [TypeScript](./TypeScript.md) | <span style="background-color: #F4D03F">[JavaScript](./JavaScript.md)</span> | [Java](./Java.md) | [C++](./C++.md) | 
+| [all](./index.html) | [TypeScript](./TypeScript.md) | <span style="background-color: #F4D03F">[JavaScript](./JavaScript.md)</span> | [Java](./Java.md) | [C++](./C++.md) | 
 
 The following list of repositories was selected because of one of the following:
 1. They are JavaScript repositories **over 400 MB and 1000 stars**
