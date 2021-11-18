@@ -42,7 +42,7 @@ _The highest number in each column is highlighted_
 | [github/docs](https://github.com/github/docs) |  4,840 | 713 MB | <span style="background-color: #F4D03F">1289</span> | <span style="background-color: #F4D03F">141</span> 🤓 | ★ 7143 | 👁 7143 |
 | [be5invis/Sarasa-Gothic](https://github.com/be5invis/Sarasa-Gothic) |  2,866 | 3.14 GB | 6 | 1 🤓 | ★ 6667 | 👁 6667 |
 
-  ## Details
+## Details
 
   I am leveraging [Cloc](https://github.com/AlDanial/cloc) for the LOC, however, for the total, I am only counting the languages defined in [config.json](https://github.com/stacey-gammon/repo-stats/blob/main/config.json), so as to eliminate counting things like lines of JSON (of which, for example, the Kibana repo has a couple million!).
 

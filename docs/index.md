@@ -1,5 +1,5 @@
 
-## Statistics on the worlds largest undefined GitHub monorepos
+## Statistics on the worlds largest GitHub monorepos
 
 | [All](./index.html) | [TypeScript](./TypeScript.md) | [JavaScript](./JavaScript.md) | [Java](./Java.md) | [C++](./C++.md) | 
 
@@ -125,7 +125,7 @@ _The highest number in each column is highlighted_
 | [rewardone/OSCPRepo](https://github.com/rewardone/OSCPRepo) | 15 | JavaScript | 15 | 731 MB | 0 | 0 🤓 | ★ 1887 | 👁 1887 |
 | [gali8/Tesseract-OCR-iOS](https://github.com/gali8/Tesseract-OCR-iOS) | 0 | C++ | 0 | 888 MB | 0 | 0 🤓 | ★ 4136 | 👁 4136 |
 
-  ## Details
+## Details
 
   I am leveraging [Cloc](https://github.com/AlDanial/cloc) for the LOC, however, for the total, I am only counting the languages defined in [config.json](https://github.com/stacey-gammon/repo-stats/blob/main/config.json), so as to eliminate counting things like lines of JSON (of which, for example, the Kibana repo has a couple million!).
 

@@ -49,7 +49,7 @@ _The highest number in each column is highlighted_
 | [elastic/search-ui](https://github.com/elastic/search-ui) |  0 | 6.12 MB | 4 | 2 🤓 | ★ 1500 | 👁 1500 |
 | [elastic/elasticsearch](https://github.com/elastic/elasticsearch) |  0 | 943 MB | 484 | 83 🤓 | ★ 57244 | 👁 57244 |
 
-  ## Details
+## Details
 
   I am leveraging [Cloc](https://github.com/AlDanial/cloc) for the LOC, however, for the total, I am only counting the languages defined in [config.json](https://github.com/stacey-gammon/repo-stats/blob/main/config.json), so as to eliminate counting things like lines of JSON (of which, for example, the Kibana repo has a couple million!).
 

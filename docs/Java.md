@@ -42,7 +42,7 @@ _The highest number in each column is highlighted_
 | [daniulive/SmarterStreaming](https://github.com/daniulive/SmarterStreaming) |  8,937 | <span style="background-color: #F4D03F">6.99 GB</span> | 1 | 1 🤓 | ★ 9786 | 👁 9786 |
 | [MisterBooo/LeetCodeAnimation](https://github.com/MisterBooo/LeetCodeAnimation) |  265 | 522 MB | 0 | 0 🤓 | ★ <span style="background-color: #F4D03F">67748</span> | 👁 <span style="background-color: #F4D03F">67748</span> |
 
-  ## Details
+## Details
 
   I am leveraging [Cloc](https://github.com/AlDanial/cloc) for the LOC, however, for the total, I am only counting the languages defined in [config.json](https://github.com/stacey-gammon/repo-stats/blob/main/config.json), so as to eliminate counting things like lines of JSON (of which, for example, the Kibana repo has a couple million!).
 
