@@ -12,7 +12,7 @@ _The highest number in each column is highlighted_
 | Repo | C++ LOC | Repo Size | Monthly commit count | 🤓 Monthly committer count | ★ Stars count | 👁 Watchers count |
 | -----|----------------------|-----------|------------------|----------------|----------|----------------|
 | [gcc-mirror/gcc](https://github.com/gcc-mirror/gcc) |  <span style="background-color: #F4D03F">1,127,319</span> | <span style="background-color: #F4D03F">3.09 GB</span> | 704 | 🤓 <span style="background-color: #F4D03F">107</span> | ★ 5622 | 👁 5622 |
-| [catboost/catboost](https://github.com/catboost/catboost) |  702,974 | 843 MB | 587 | 🤓 76 | ★ 6203 | 👁 6203 |
+| [catboost/catboost](https://github.com/catboost/catboost) |  702,974 | 843 MB | 587 | 🤓 75 | ★ 6203 | 👁 6203 |
 | [blender/blender](https://github.com/blender/blender) |  614,734 | 562 MB | <span style="background-color: #F4D03F">983</span> | 🤓 65 | ★ 3774 | 👁 3774 |
 | [TelegramMessenger/Telegram-iOS](https://github.com/TelegramMessenger/Telegram-iOS) |  326,330 | 629 MB | 107 | 🤓 3 | ★ 3124 | 👁 3124 |
 | [ARMmbed/mbed-os](https://github.com/ARMmbed/mbed-os) |  201,649 | 487 MB | 22 | 🤓 13 | ★ 3898 | 👁 3898 |

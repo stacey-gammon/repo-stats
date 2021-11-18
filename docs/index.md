@@ -9,7 +9,7 @@ The following list of repositories was selected because of one of the following:
 
 _The highest number in each column is highlighted_
 
-| Repo |  Total LOC | Primary language | LOC | Repo Size | Monthly commit count | 🤓 Monthly committer count | ★ Stars count | 👁 Watchers count |
+| Repo |  Total LOC | Primary language | Primary language LOC | Repo Size | Monthly commit count | 🤓 Monthly committer count | ★ Stars count | 👁 Watchers count |
 | -----|-------|-----|----------------------|-----------|------------------|----------------|----------|----------------|
 | [arangodb/arangodb](https://github.com/arangodb/arangodb) | <span style="background-color: #F4D03F">4,963,853</span> | C++ | <span style="background-color: #F4D03F">3,797,328</span> | 1.75 GB | 92 | 🤓 20 | ★ 11786 | 👁 11786 |
 | [aosp-mirror/platform_frameworks_base](https://github.com/aosp-mirror/platform_frameworks_base) | 3,616,146 | Java | 3,329,823 | 2.97 GB | 248 | 🤓 115 | ★ 9791 | 👁 9791 |
@@ -32,7 +32,7 @@ _The highest number in each column is highlighted_
 | [microsoft/vscode](https://github.com/microsoft/vscode) | 810,217 | TypeScript | 763,871 | 434 MB | 1135 | 🤓 65 | ★ <span style="background-color: #F4D03F">124229</span> | 👁 <span style="background-color: #F4D03F">124229</span> |
 | [eclipse/deeplearning4j](https://github.com/eclipse/deeplearning4j) | 776,126 | Java | 543,135 | 736 MB | 106 | 🤓 3 | ★ 12249 | 👁 12249 |
 | [facebook/buck](https://github.com/facebook/buck) | 765,150 | Java | 744,635 | 1.64 GB | 1 | 🤓 1 | ★ 8134 | 👁 8134 |
-| [catboost/catboost](https://github.com/catboost/catboost) | 706,597 | C++ | 702,974 | 843 MB | 587 | 🤓 76 | ★ 6203 | 👁 6203 |
+| [catboost/catboost](https://github.com/catboost/catboost) | 706,597 | C++ | 702,974 | 843 MB | 587 | 🤓 75 | ★ 6203 | 👁 6203 |
 | [neo4j/neo4j](https://github.com/neo4j/neo4j) | 686,936 | Java | 686,936 | 547 MB | 18 | 🤓 11 | ★ 9493 | 👁 9493 |
 | [CesiumGS/cesium](https://github.com/CesiumGS/cesium) | 658,376 | JavaScript | 658,032 | 454 MB | 158 | 🤓 9 | ★ 7980 | 👁 7980 |
 | [odoo/odoo](https://github.com/odoo/odoo) | 618,961 | JavaScript | 618,785 | 4.04 GB | 226 | 🤓 99 | ★ 23331 | 👁 23331 |
