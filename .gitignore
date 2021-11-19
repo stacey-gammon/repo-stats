@@ -7,7 +7,9 @@ yarn-error.log*
 lerna-debug.log*
 env.bash
 build
-
+docs/*.html
+docs/.jekyll-cache
+docs/_site
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
 

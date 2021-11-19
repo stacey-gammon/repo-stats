@@ -12,23 +12,34 @@
             { "owner": "babel", "repo": "babel" },
             { "owner": "typescript-eslint", "repo": "typescript-eslint" },
             { "owner": "microsoft", "repo": "rushstack" },
-            { "owner": "elastic", "repo": "search-ui" },
             { "owner": "open-telemetry", "repo": "opentelemetry-js" },
             { "owner": "open-telemetry", "repo": "opentelemetry-js-contrib" },
-            { "owner": "celo-org", "repo": "celo-monorepo" },
             { "owner": "angular", "repo": "angular" },
             { "owner": "formatjs", "repo": "formatjs" },
+            { "owner": "elastic", "repo": "kibana" },
             { "owner": "thi-ng", "repo": "umbrella" },
             { "owner": "facebook", "repo": "jest" },
-            { "owner": "Esri", "repo": "arcgis-rest-js" },
-            { "owner": "airbytehq", "repo": "airbyte" },
-            { "owner": "elastic", "repo": "elasticsearch" }
+            { "owner": "airbytehq", "repo": "airbyte" }
         ],
         "Java": [
-            { "owner": "elastic", "repo": "elasticsearch" }
+            { "owner": "elastic", "repo": "elasticsearch" },
+            { "owner": "spring-projects", "repo": "spring-framework" },
+            { "owner": "elastic", "repo": "search-ui" }
         ]
     },
     "skipRepos": [
-      "owid/covid-19-data"
+      "owid/covid-19-data",
+      "be5invis/Iosevka",
+      "leapmotion/ProjectNorthStar",
+      "gali8/Tesseract-OCR-iOS",
+      "rewardone/OSCPRepo",
+      "Tencent/TencentOS-kernel",
+      "OLIMEX/OLINUXINO",
+      "daniulive/SmarterStreaming",
+      "garrylachman/ElectroCRUD",
+      "wseemann/FFmpegMediaMetadataRetriever",
+      "Tencent/TencentOS-kernel",
+      "be5invis/Sarasa-Gothic",
+      "trustwallet/assets"
     ]
 }

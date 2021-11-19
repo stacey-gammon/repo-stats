@@ -1,9 +1,17 @@
-import { RepoStats } from './types';
+import { RepoStats } from './types';    
 
-export function highlightIfMatches(contents: number, toMatch: number, displayVal?: string): string {
+export const MAX_REPOS_CONFIG = 'repoLimit';
+export const MIN_STARS_CONFIG = 'minStars';
+export const MIN_SIZE_CONFIG = 'minSize';
+
+export function highlightIfMatches(contents: number | string, toMatch: number | string, displayVal?: string): string {
   const matches = toMatch === contents;
   const display = displayVal || contents.toString();
-  return matches ? `<span style="background-color: #F4D03F">${display}</span>` : display;
+  return matches ? highlight(display) : display;
+}
+
+export function highlight(display: string): string {
+  return  `<span style="background-color: #F4D03F">${display}</span>`;
 }
   
 export  function getMaxVal(rows: RepoStats[], col: keyof RepoStats): number {
@@ -15,4 +23,3 @@ export  function getMaxVal(rows: RepoStats[], col: keyof RepoStats): number {
     return num> max ? num : max
   }, 0);
 }
-  
