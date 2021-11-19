@@ -19,7 +19,8 @@
             { "owner": "elastic", "repo": "kibana" },
             { "owner": "thi-ng", "repo": "umbrella" },
             { "owner": "facebook", "repo": "jest" },
-            { "owner": "airbytehq", "repo": "airbyte" }
+            { "owner": "airbytehq", "repo": "airbyte" },
+            { "owner": "gravitational", "repo": "teleport" }
         ],
         "Java": [
             { "owner": "elastic", "repo": "elasticsearch" },
