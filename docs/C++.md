@@ -14,7 +14,7 @@ _The highest number in each column is highlighted_
 | [freebsd/freebsd-src](https://github.com/freebsd/freebsd-src) |  <span style="background-color: #F4D03F">2,764,261</span> | 2.35 GB | 631 | 🤓 114 | ★ 6155 | 👁 6155 |
 | [gcc-mirror/gcc](https://github.com/gcc-mirror/gcc) |  1,127,319 | 3.09 GB | 704 | 🤓 105 | ★ 5634 | 👁 5634 |
 | [catboost/catboost](https://github.com/catboost/catboost) |  702,974 | 852 MB | 587 | 🤓 73 | ★ 6208 | 👁 6208 |
-| [reactos/reactos](https://github.com/reactos/reactos) |  446,911 | 569 MB | 56 | 🤓 23 | ★ 10072 | 👁 10072 |
+| [reactos/reactos](https://github.com/reactos/reactos) |  446,911 | 569 MB | 56 | 🤓 22 | ★ 10072 | 👁 10072 |
 | [yugabyte/yugabyte-db](https://github.com/yugabyte/yugabyte-db) |  399,919 | 300 MB | 236 | 🤓 69 | ★ 5790 | 👁 5790 |
 | [emscripten-core/emscripten](https://github.com/emscripten-core/emscripten) |  274,797 | 246 MB | 124 | 🤓 12 | ★ 21422 | 👁 21422 |
 | [audacity/audacity](https://github.com/audacity/audacity) |  223,569 | 247 MB | 81 | 🤓 11 | ★ 6651 | 👁 6651 |

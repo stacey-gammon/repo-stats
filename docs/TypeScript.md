@@ -50,14 +50,14 @@ _The highest number in each column is highlighted_
 | [open-telemetry/opentelemetry-js-contrib](https://github.com/open-telemetry/opentelemetry-js-contrib) |  31,369 | 23.8 MB | 18 | 🤓 12 | ★ 172 | 👁 172 |
 | [airbytehq/airbyte](https://github.com/airbytehq/airbyte) |  27,613 | 83.1 MB | 345 | 🤓 75 | ★ 4536 | 👁 4536 |
 | [akveo/react-native-ui-kitten](https://github.com/akveo/react-native-ui-kitten) |  26,147 | 478 MB | 0 | 🤓 0 | ★ 8753 | 👁 8753 |
+| [gravitational/webapps](https://github.com/gravitational/webapps) |  25,120 | 17.2 MB | 18 | 🤓 3 | ★ 19 | 👁 19 |
 | [react-page/react-page](https://github.com/react-page/react-page) |  20,293 | 232 MB | 7 | 🤓 1 | ★ 8685 | 👁 8685 |
 | [MichalLytek/type-graphql](https://github.com/MichalLytek/type-graphql) |  19,722 | 264 MB | 2 | 🤓 1 | ★ 6806 | 👁 6806 |
 | [react-dnd/react-dnd](https://github.com/react-dnd/react-dnd) |  16,101 | 653 MB | 0 | 🤓 0 | ★ 16722 | 👁 16722 |
 | [the1812/Bilibili-Evolved](https://github.com/the1812/Bilibili-Evolved) |  16,082 | 289 MB | 13 | 🤓 2 | ★ 9530 | 👁 9530 |
-| [supabase/supabase](https://github.com/supabase/supabase) |  10,797 | 264 MB | 64 | 🤓 28 | ★ 21857 | 👁 21857 |
+| [supabase/supabase](https://github.com/supabase/supabase) |  10,797 | 264 MB | 64 | 🤓 27 | ★ 21857 | 👁 21857 |
 | [justadudewhohacks/face-api.js](https://github.com/justadudewhohacks/face-api.js) |  10,304 | 221 MB | 0 | 🤓 0 | ★ 13138 | 👁 13138 |
 | [Jigsaw-Code/outline-client](https://github.com/Jigsaw-Code/outline-client) |  3,348 | 396 MB | 24 | 🤓 1 | ★ 6506 | 👁 6506 |
-| [gravitational/teleport](https://github.com/gravitational/teleport) |  0 | 196 MB | 129 | 🤓 29 | ★ 10422 | 👁 10422 |
 
 ## Details
 

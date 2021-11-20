@@ -48,7 +48,7 @@ _The highest number in each column is highlighted_
 | [libgdx/libgdx](https://github.com/libgdx/libgdx) | 481,827 | Java | 276,167 | 1.12 GB | 3 | 🤓 5 | ★ 19278 | 👁 19278 |
 | [microsoft/fast](https://github.com/microsoft/fast) | 477,161 | TypeScript | 473,178 | 235 MB | 44 | 🤓 12 | ★ 6462 | 👁 6462 |
 | [apache/pulsar](https://github.com/apache/pulsar) | 462,001 | Java | 430,142 | 1.37 GB | 258 | 🤓 61 | ★ 9930 | 👁 9930 |
-| [reactos/reactos](https://github.com/reactos/reactos) | 454,133 | C++ | 446,911 | 569 MB | 56 | 🤓 23 | ★ 10072 | 👁 10072 |
+| [reactos/reactos](https://github.com/reactos/reactos) | 454,133 | C++ | 446,911 | 569 MB | 56 | 🤓 22 | ★ 10072 | 👁 10072 |
 | [microsoft/fluentui](https://github.com/microsoft/fluentui) | 444,183 | TypeScript | 435,912 | 308 MB | 197 | 🤓 44 | ★ 12450 | 👁 12450 |
 | [dbeaver/dbeaver](https://github.com/dbeaver/dbeaver) | 435,952 | Java | 430,741 | 274 MB | 212 | 🤓 9 | ★ 23257 | 👁 23257 |
 | [Automattic/wp-calypso](https://github.com/Automattic/wp-calypso) | 415,718 | JavaScript | 306,661 | 546 MB | 540 | 🤓 88 | ★ 11925 | 👁 11925 |
@@ -117,6 +117,7 @@ _The highest number in each column is highlighted_
 | [remotion-dev/remotion](https://github.com/remotion-dev/remotion) | 36,328 | TypeScript | 35,889 | 366 MB | 98 | 🤓 4 | ★ 8615 | 👁 8615 |
 | [open-telemetry/opentelemetry-js-contrib](https://github.com/open-telemetry/opentelemetry-js-contrib) | 34,528 | TypeScript | 31,369 | 23.8 MB | 18 | 🤓 12 | ★ 172 | 👁 172 |
 | [YMFE/yapi](https://github.com/YMFE/yapi) | 34,434 | JavaScript | 34,434 | 260 MB | 0 | 🤓 0 | ★ 23003 | 👁 23003 |
+| [gravitational/webapps](https://github.com/gravitational/webapps) | 32,862 | TypeScript | 25,120 | 17.2 MB | 18 | 🤓 3 | ★ 19 | 👁 19 |
 | [williamfiset/Algorithms](https://github.com/williamfiset/Algorithms) | 30,856 | Java | 30,659 | 1.06 GB | 6 | 🤓 2 | ★ 11359 | 👁 11359 |
 | [arduino/Arduino](https://github.com/arduino/Arduino) | 30,735 | Java | 27,110 | 1.42 GB | 0 | 🤓 0 | ★ 12212 | 👁 12212 |
 | [CarGuo/GSYVideoPlayer](https://github.com/CarGuo/GSYVideoPlayer) | 29,849 | Java | 29,849 | 366 MB | 3 | 🤓 1 | ★ 16872 | 👁 16872 |
@@ -132,7 +133,7 @@ _The highest number in each column is highlighted_
 | [react-page/react-page](https://github.com/react-page/react-page) | 20,654 | TypeScript | 20,293 | 232 MB | 7 | 🤓 1 | ★ 8685 | 👁 8685 |
 | [MichalLytek/type-graphql](https://github.com/MichalLytek/type-graphql) | 20,428 | TypeScript | 19,722 | 264 MB | 2 | 🤓 1 | ★ 6806 | 👁 6806 |
 | [scwang90/SmartRefreshLayout](https://github.com/scwang90/SmartRefreshLayout) | 20,085 | Java | 20,085 | 280 MB | 1 | 🤓 1 | ★ 23129 | 👁 23129 |
-| [supabase/supabase](https://github.com/supabase/supabase) | 18,216 | TypeScript | 10,797 | 264 MB | 64 | 🤓 28 | ★ 21857 | 👁 21857 |
+| [supabase/supabase](https://github.com/supabase/supabase) | 18,216 | TypeScript | 10,797 | 264 MB | 64 | 🤓 27 | ★ 21857 | 👁 21857 |
 | [qemu/qemu](https://github.com/qemu/qemu) | 18,215 | C++ | 18,208 | 361 MB | 418 | 🤓 111 | ★ 5422 | 👁 5422 |
 | [deepmind/lab](https://github.com/deepmind/lab) | 17,504 | C++ | 17,504 | 471 MB | 0 | 🤓 0 | ★ 6574 | 👁 6574 |
 | [justadudewhohacks/face-api.js](https://github.com/justadudewhohacks/face-api.js) | 17,065 | TypeScript | 10,304 | 221 MB | 0 | 🤓 0 | ★ 13138 | 👁 13138 |
@@ -165,7 +166,6 @@ _The highest number in each column is highlighted_
 | [lottie-react-native/lottie-react-native](https://github.com/lottie-react-native/lottie-react-native) | 1,042 | Java | 523 | 300 MB | 10 | 🤓 3 | ★ 14642 | 👁 14642 |
 | [postgres/postgres](https://github.com/postgres/postgres) | 688 | C++ | 688 | 618 MB | 154 | 🤓 19 | ★ 9214 | 👁 9214 |
 | [MisterBooo/LeetCodeAnimation](https://github.com/MisterBooo/LeetCodeAnimation) | 282 | Java | 265 | 522 MB | 0 | 🤓 0 | ★ 67768 | 👁 67768 |
-| [gravitational/teleport](https://github.com/gravitational/teleport) | 0 | TypeScript | 0 | 196 MB | 129 | 🤓 29 | ★ 10422 | 👁 10422 |
 | [openssl/openssl](https://github.com/openssl/openssl) | 0 | C++ | 0 | 251 MB | 91 | 🤓 27 | ★ 16957 | 👁 16957 |
 | [systemd/systemd](https://github.com/systemd/systemd) | 0 | C++ | 0 | 229 MB | 599 | 🤓 43 | ★ 8709 | 👁 8709 |
 | [raysan5/raylib](https://github.com/raysan5/raylib) | 0 | C++ | 0 | 381 MB | 117 | 🤓 30 | ★ 7933 | 👁 7933 |

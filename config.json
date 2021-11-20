@@ -20,7 +20,7 @@
             { "owner": "thi-ng", "repo": "umbrella" },
             { "owner": "facebook", "repo": "jest" },
             { "owner": "airbytehq", "repo": "airbyte" },
-            { "owner": "gravitational", "repo": "teleport" }
+            { "owner": "gravitational", "repo": "webapps" }
         ],
         "Java": [
             { "owner": "elastic", "repo": "elasticsearch" },
