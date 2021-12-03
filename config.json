@@ -1,6 +1,9 @@
 {
     "outputFolder": "docs",
     "outType": "md",
+    "maxRepos": 1,
+    "minSize": 300000,
+    "minStars": 4000,
     "languages": [
         "TypeScript",
         "JavaScript",

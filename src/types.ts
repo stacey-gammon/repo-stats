@@ -20,19 +20,19 @@ export interface RepoStats {
 }
 
 export interface ClocTypeStats {
-    nFiles: number;
-    code: number;
+  nFiles: number;
+  code: number;
 }
 
 export interface ClocStats {
-  SUM: ClocTypeStats
-  TypeScript?: ClocTypeStats
-  JavaScript?: ClocTypeStats
-  [key: string]: ClocTypeStats | undefined 
+  SUM: ClocTypeStats;
+  TypeScript?: ClocTypeStats;
+  JavaScript?: ClocTypeStats;
+  [key: string]: ClocTypeStats | undefined;
 }
 
 export interface OctokitResponse {
-  data: { items: Array<OctokitRepo> }
+  data: { items: Array<OctokitRepo> };
 }
 
 export type OctokitRepo = typeof TEST_REPO;

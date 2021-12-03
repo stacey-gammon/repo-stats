@@ -5,13 +5,11 @@ import os from 'os';
 import fs from 'fs';
 import nconf from 'nconf';
 
-export async function getCommitterCount(
-  client: Octokit,
-  repo: OctokitRepo): Promise<number> {
-
+export async function getCommitterCount(client: Octokit, repo: OctokitRepo): Promise<number> {
   const contributorStatsFilePath = Path.resolve(
     os.tmpdir(),
-    `${repo.name}ContributorStatsResponse`);
+    `${repo.name}ContributorStatsResponse`
+  );
 
   if (fs.existsSync(contributorStatsFilePath) && nconf.get('clearCache')) {
     fs.rmSync(contributorStatsFilePath);
@@ -19,7 +17,7 @@ export async function getCommitterCount(
   if (!fs.existsSync(contributorStatsFilePath)) {
     const response = await client.repos.getContributorsStats({
       repo: repo.name,
-      owner: repo.owner.login
+      owner: repo.owner.login,
     });
 
     fs.writeFileSync(contributorStatsFilePath, JSON.stringify(response));

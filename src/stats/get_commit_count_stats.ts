@@ -7,11 +7,9 @@ import nconf from 'nconf';
 
 export async function getLastFourWeekCommitCount(
   client: Octokit,
-  repo: OctokitRepo): Promise<number> {
-
-  const commitStatsFilePath = Path.resolve(
-    os.tmpdir(),
-    `${repo.name}CommitStatsResponse`);
+  repo: OctokitRepo
+): Promise<number> {
+  const commitStatsFilePath = Path.resolve(os.tmpdir(), `${repo.name}CommitStatsResponse`);
 
   if (nconf.get('clearCache')) {
     fs.rmSync(commitStatsFilePath);
@@ -19,7 +17,7 @@ export async function getLastFourWeekCommitCount(
   if (!fs.existsSync(commitStatsFilePath)) {
     const response = await client.repos.getParticipationStats({
       repo: repo.name,
-      owner: repo.owner.login
+      owner: repo.owner.login,
     });
 
     fs.writeFileSync(commitStatsFilePath, JSON.stringify(response));

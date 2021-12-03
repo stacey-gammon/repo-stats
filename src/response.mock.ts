@@ -4,7 +4,7 @@ export const TEST_REPO = {
   full_name: 'microsoft/vscode',
   private: false,
   owner: {
-    login: 'microsoft'
+    login: 'microsoft',
   },
   html_url: 'https://github.com/microsoft/vscode',
   description: 'Visual Studio Code',
@@ -12,17 +12,13 @@ export const TEST_REPO = {
   url: 'https://api.github.com/repos/microsoft/vscode',
   forks_url: 'https://api.github.com/repos/microsoft/vscode/forks',
   keys_url: 'https://api.github.com/repos/microsoft/vscode/keys{/key_id}',
-  collaborators_url:
-    'https://api.github.com/repos/microsoft/vscode/collaborators{/collaborator}',
+  collaborators_url: 'https://api.github.com/repos/microsoft/vscode/collaborators{/collaborator}',
   teams_url: 'https://api.github.com/repos/microsoft/vscode/teams',
   hooks_url: 'https://api.github.com/repos/microsoft/vscode/hooks',
-  issue_events_url:
-    'https://api.github.com/repos/microsoft/vscode/issues/events{/number}',
+  issue_events_url: 'https://api.github.com/repos/microsoft/vscode/issues/events{/number}',
   events_url: 'https://api.github.com/repos/microsoft/vscode/events',
-  assignees_url:
-    'https://api.github.com/repos/microsoft/vscode/assignees{/user}',
-  branches_url:
-    'https://api.github.com/repos/microsoft/vscode/branches{/branch}',
+  assignees_url: 'https://api.github.com/repos/microsoft/vscode/assignees{/user}',
+  branches_url: 'https://api.github.com/repos/microsoft/vscode/branches{/branch}',
   tags_url: 'https://api.github.com/repos/microsoft/vscode/tags',
   blobs_url: 'https://api.github.com/repos/microsoft/vscode/git/blobs{/sha}',
   git_tags_url: 'https://api.github.com/repos/microsoft/vscode/git/tags{/sha}',
@@ -31,30 +27,21 @@ export const TEST_REPO = {
   statuses_url: 'https://api.github.com/repos/microsoft/vscode/statuses/{sha}',
   languages_url: 'https://api.github.com/repos/microsoft/vscode/languages',
   stargazers_url: 'https://api.github.com/repos/microsoft/vscode/stargazers',
-  contributors_url:
-    'https://api.github.com/repos/microsoft/vscode/contributors',
+  contributors_url: 'https://api.github.com/repos/microsoft/vscode/contributors',
   subscribers_url: 'https://api.github.com/repos/microsoft/vscode/subscribers',
-  subscription_url:
-    'https://api.github.com/repos/microsoft/vscode/subscription',
+  subscription_url: 'https://api.github.com/repos/microsoft/vscode/subscription',
   commits_url: 'https://api.github.com/repos/microsoft/vscode/commits{/sha}',
-  git_commits_url:
-    'https://api.github.com/repos/microsoft/vscode/git/commits{/sha}',
-  comments_url:
-    'https://api.github.com/repos/microsoft/vscode/comments{/number}',
-  issue_comment_url:
-    'https://api.github.com/repos/microsoft/vscode/issues/comments{/number}',
-  contents_url:
-    'https://api.github.com/repos/microsoft/vscode/contents/{+path}',
-  compare_url:
-    'https://api.github.com/repos/microsoft/vscode/compare/{base}...{head}',
+  git_commits_url: 'https://api.github.com/repos/microsoft/vscode/git/commits{/sha}',
+  comments_url: 'https://api.github.com/repos/microsoft/vscode/comments{/number}',
+  issue_comment_url: 'https://api.github.com/repos/microsoft/vscode/issues/comments{/number}',
+  contents_url: 'https://api.github.com/repos/microsoft/vscode/contents/{+path}',
+  compare_url: 'https://api.github.com/repos/microsoft/vscode/compare/{base}...{head}',
   merges_url: 'https://api.github.com/repos/microsoft/vscode/merges',
-  archive_url:
-    'https://api.github.com/repos/microsoft/vscode/{archive_format}{/ref}',
+  archive_url: 'https://api.github.com/repos/microsoft/vscode/{archive_format}{/ref}',
   downloads_url: 'https://api.github.com/repos/microsoft/vscode/downloads',
   issues_url: 'https://api.github.com/repos/microsoft/vscode/issues{/number}',
   pulls_url: 'https://api.github.com/repos/microsoft/vscode/pulls{/number}',
-  milestones_url:
-    'https://api.github.com/repos/microsoft/vscode/milestones{/number}',
+  milestones_url: 'https://api.github.com/repos/microsoft/vscode/milestones{/number}',
   notifications_url:
     'https://api.github.com/repos/microsoft/vscode/notifications{?since,all,participating}',
   labels_url: 'https://api.github.com/repos/microsoft/vscode/labels{/name}',
@@ -90,5 +77,5 @@ export const TEST_REPO = {
   open_issues: 5155,
   watchers: 123868,
   default_branch: 'main',
-  score: 1
+  score: 1,
 };

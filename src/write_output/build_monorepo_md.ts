@@ -1,10 +1,15 @@
-
 import fs from 'fs';
-import { RepoStats } from './types';
-import { getMaxVal, highlightIfMatches, MIN_SIZE_CONFIG, MIN_STARS_CONFIG, MAX_REPOS_CONFIG } from './utils';
+import { RepoStats } from '../types';
+import { getMaxVal, highlightIfMatches, highlight } from '../utils';
 import nconf from 'nconf';
+import { getConfig } from '../config';
 
-export function writeMonoRepoPage(stats: Array<RepoStats>, languagesHeader: string, language?: string) {
+export function writeMonoRepoPage(
+  stats: Array<RepoStats>,
+  allLanguages: string[],
+  language?: string
+) {
+  const config = getConfig();
   const maxTotalLOC = getMaxVal(stats, 'totalLOC');
   const maxPrimaryLOC = getMaxVal(stats, 'primaryLOC');
   const maxRawRepoSize = getMaxVal(stats, 'repoSizeRaw');
@@ -13,9 +18,8 @@ export function writeMonoRepoPage(stats: Array<RepoStats>, languagesHeader: stri
   const maxStars = getMaxVal(stats, 'starsCount');
   const maxWatchers = getMaxVal(stats, 'watchersCount');
   const maxLoc = getMaxVal(stats, 'locCount');
-  const minSize = nconf.get(MIN_SIZE_CONFIG);
-  const minStars = nconf.get(MIN_STARS_CONFIG);
-  const maxRepos = nconf.get(MAX_REPOS_CONFIG);
+
+  const languagesHeader = getLanguagesHeader(allLanguages, language);
 
   const mdText = `
 ## Statistics on the world's largest ${language ? language + ' ' : ''}GitHub monorepos
@@ -23,26 +27,39 @@ export function writeMonoRepoPage(stats: Array<RepoStats>, languagesHeader: stri
 ${languagesHeader}
 
 The following list of repositories was selected because of one of the following:
-1. They are in the top ${maxRepos} ${language || ''} repositories **over ${minSize} MB and ${minStars} stars**, sorted by stars.*
+1. They are in the top ${config.maxRepos} ${language || ''} repositories **over ${
+    config.minSize
+  } MB and ${config.minStars} stars**, sorted by stars.*
 2. They are defined in \`extraRepos\` in the [config.json](https://github.com/stacey-gammon/repo-stats/blob/main/config.json).
 
 _The highest number in each column is highlighted_
 
-| Repo | ${language ? language : ' Total LOC | Primary language | Primary language'} LOC | Repo Size | Monthly commit count | 🤓 Monthly committer count | ★ Stars count | 👁 Watchers count |
-| -----|${language ? '' : '-------|-----|'}----------------------|-----------|------------------|----------------|----------|----------------|
-${stats.map(row => {
+| Repo | ${
+    language ? language : ' Total LOC | Primary language | Primary language'
+  } LOC | Repo Size | Monthly commit count | 🤓 Monthly committer count | ★ Stars count | 👁 Watchers count |
+| -----|${
+    language ? '' : '-------|-----|'
+  }----------------------|-----------|------------------|----------------|----------|----------------|
+${stats
+  .map((row) => {
     const repo = `[${row.name}](${row.url})`;
     const totalLOC = highlightIfMatches(row.totalLOC, maxTotalLOC, row.totalLOC.toLocaleString());
-    const lOC = highlightIfMatches(language ? row.locCount : row.primaryLOC, language ? maxLoc: maxPrimaryLOC, language ? row.locCount.toLocaleString() : row.primaryLOC.toLocaleString());
+    const lOC = highlightIfMatches(
+      language ? row.locCount : row.primaryLOC,
+      language ? maxLoc : maxPrimaryLOC,
+      language ? row.locCount.toLocaleString() : row.primaryLOC.toLocaleString()
+    );
     const repoSize = highlightIfMatches(row.repoSizeRaw, maxRawRepoSize, row.repoSize);
     const commitCount = highlightIfMatches(row.monthlyCommitCount, maxCommits);
     const committerCount = highlightIfMatches(row.monthlyCommitterCount, maxCommitters);
     const stars = highlightIfMatches(row.starsCount, maxStars);
     const watchers = highlightIfMatches(row.watchersCount, maxWatchers);
 
-    return `| ${repo} | ${language ? '' : `${totalLOC} | ${row.primaryLanguage} |`} ${lOC} | ${repoSize} | ${commitCount} | 🤓 ${committerCount} | ★ ${stars} | 👁 ${watchers} |`
-  }
-  ).join('\n')}
+    return `| ${repo} | ${
+      language ? '' : `${totalLOC} | ${row.primaryLanguage} |`
+    } ${lOC} | ${repoSize} | ${commitCount} | 🤓 ${committerCount} | ★ ${stars} | 👁 ${watchers} |`;
+  })
+  .join('\n')}
 
 ## Details
 
@@ -55,4 +72,15 @@ ${stats.map(row => {
 
   const fileName = language || 'index';
   fs.writeFileSync(`${nconf.get('outputFolder')}/${fileName}.md`, mdText);
+}
+
+function getLanguagesHeader(languages: string[], pageLanguage?: string) {
+  const allText = '[All](./index.html)';
+  const all = pageLanguage ? allText : highlight(allText);
+  return `| ${all} | ${languages
+    .map((language) => {
+      const cellVal = `[${language}](./${language}.md)`;
+      return highlightIfMatches(language, pageLanguage || '', cellVal);
+    })
+    .join(' | ')} | `;
 }

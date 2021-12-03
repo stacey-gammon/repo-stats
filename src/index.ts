@@ -1,79 +1,39 @@
 import nconf from 'nconf';
-import { getRepos } from './get_repos';
+import { getRepoMetaData } from './get_repos/get_repo_meta_data';
 import { Octokit } from '@octokit/rest';
 import { RepoStats } from './types';
-import { getRepoStats } from './stats/get_repo_stats';
-import { writeCSV } from './build_monorepo_csv';
-import { writeMonoRepoPage } from './build_monorepo_page';
-import { highlight, highlightIfMatches, MAX_REPOS_CONFIG } from './utils';
+import { getStatsForRepos } from './stats/get_stats_for_repos';
+import { getConfig, validateConfig } from './config';
+import { writeOutput } from './write_output/write_output';
+import { maybeClearCaches } from './cache';
 
-export const MIN_SIZE_FILTER_DEFAULT = 300000; // 300 MB
+export const MIN_SIZE_FILTER_DEFAULT = 300000; // in KB, so 300000 = 300 MB
 export const MIN_STARS_FILTER = 2000;
 export const LARGE_REPO_PER_PAGE_CNT_DEFAULT = 30;
 
 export async function main() {
-  nconf.argv()
-    .defaults({
-      'minSize': MIN_SIZE_FILTER_DEFAULT,
-      'minStars': MIN_STARS_FILTER,
-      [MAX_REPOS_CONFIG]: LARGE_REPO_PER_PAGE_CNT_DEFAULT
-    })
-    .env()
-    .file({ file: 'config.json' });
+  const config = getConfig();
+  validateConfig(config);
+  maybeClearCaches(config);
 
   const auth = nconf.get('GITHUB_OAUTH_TOKEN');
-  console.log('auth is ' + auth);
-  const client = new Octokit( auth? { auth } : undefined);  
+  const client = new Octokit(auth ? { auth } : undefined);
 
-  const outType = nconf.get('outType') || 'md';
-  const languages: Array<string> = nconf.get('languages') || ['TypeScript'];
+  const outType = config.outType;
+  const languages: Array<string> = config.languages;
 
-  if (typeof languages != 'object') {
-    throw new Error('languages must be an array.')
-  }
-
-  if (outType !== 'md' && outType != 'csv') {
-    throw new Error('outType must be one of csv or md.');
-  }
-
-  const extraRepos = nconf.get('extraRepos');
-  console.log('extraRepos is', extraRepos)
-  const allRepoStats: { [key: string]: RepoStats } = {}
+  let repoStatsForAllLanguages: { [key: string]: RepoStats } = {};
 
   for (const language of languages) {
-    const repos = await getRepos(client, language, extraRepos[language]);
-    const stats = await getRepoStats(client, repos, language, languages);
-    const rows = (Object.values(stats) as Array<RepoStats>).sort((a, b) => {
-      return b.locCount - a.locCount;
-    });
+    const repos = await getRepoMetaData(client, language);
+    const stats = await getStatsForRepos(client, repos, language, languages, config.skipRepos);
 
-    Object.keys(stats).forEach(key => allRepoStats[key] = stats[key]);
+    writeOutput(stats, languages, outType, language);
 
-    if (outType === 'csv') {
-      writeCSV(rows, language);
-    } else {
-      writeMonoRepoPage(rows, getLanguagesHeader(languages, language), language); 
-    }
+    repoStatsForAllLanguages = { ...repoStatsForAllLanguages, ...stats };
   }
 
-  const allRepoRows = (Object.values(allRepoStats) as Array<RepoStats>).sort((a, b) => {
-    return b.totalLOC - a.totalLOC;
-  });
-
-  if (outType === 'csv') {
-    writeCSV(allRepoRows);
-  } else {
-    writeMonoRepoPage(allRepoRows, getLanguagesHeader(languages)); 
-  }
+  writeOutput(repoStatsForAllLanguages, languages, outType);
 }
 
 main();
-
-function getLanguagesHeader(languages: string[], pageLanguage?: string) {
-  const allText = '[All](./index.html)';
-  const all = pageLanguage ? allText : highlight(allText);
-  return `| ${all} | ${languages.map(language => {
-    const cellVal = `[${language}](./${language}.md)`;
-    return highlightIfMatches(language, pageLanguage || '', cellVal);
-  }).join (' | ')} | `;
-}
