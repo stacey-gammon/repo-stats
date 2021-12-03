@@ -1,3 +1,7 @@
+# cache dirs
+.cache
+.repo_cache
+.stats_cache
 # Logs
 logs
 *.log
