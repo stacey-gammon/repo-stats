@@ -85,29 +85,6 @@ The following configuration settings are supported. These can be set inside the 
 }
 ```
 
-- clearCache
-
-Run with `--clearCache` or set a variable in the config file to true if you would like to delete all cached information. By default the cache is never cleaned up. Cloning large repositories can take a very long time!
-
-### languages
-
-Set the list of languages that will count towards `totalLOC`. 
-
-## outType
-
-`md` or `csv`.
-
-### extraRepos
-
-A list of additional repos to include.
-
-### skippedRepos
-
-A list of repositories to skip. The following are included because they are large repositories without a lot of actual code:
-
-- [owid/covid-19-data](https://github.com/owid/covid-19-data): Large because it contains a lot of CSV files filled with data.
-- [be5invis/Iosevka](https://github.com/be5invis/Iosevka): A humongous repository that just includes fonts.
-
 ## Run
 
 ```
